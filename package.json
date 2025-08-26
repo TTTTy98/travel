@@ -9,9 +9,7 @@
   "dependencies": {
     "@ant-design/colors": "^8.0.0",
     "@babel/runtime": "^7.27.0",
-    "@tinymce/tinymce-vue": "^6.1.0",
-    "@wangeditor/editor": "^5.1.23",
-    "@wangeditor/editor-for-vue": "^1.0.2",
+
     "ant-design-vue": "^4.2.6",
     "axios": "^1.8.4",
     "docx": "^9.3.0",
@@ -29,13 +27,13 @@
     "marked": "^15.0.7",
     "pizzip": "^3.1.8",
     "quill": "^2.0.3",
-    "tinymce": "^7.8.0",
+
     "vue": "^2.7.16",
     "vue-axios": "^3.5.2",
     "vue-file-agent": "^1.7.3",
     "vue-quill-editor": "^3.0.6",
-    "vue-router": "^3.5.4",
-    "wangeditor": "^4.7.15"
+    "vue-router": "^3.5.4"
+  
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
