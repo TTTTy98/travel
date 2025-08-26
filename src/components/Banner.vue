@@ -1,5 +1,5 @@
 <template>
-  <section class="banner">
+  <section class="banner" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
     <!-- 轮播内容 -->
     <div
       class="carousel"
@@ -22,6 +22,7 @@
               type="warning"
               v-if="currentIndex === 3 || currentIndex === 4"
               round
+              size="medium"
             >
               Learn more
             </el-button>
@@ -31,8 +32,12 @@
     </div>
 
     <!-- 左右箭头按钮 -->
-    <button class="carousel-btn prev" @click="prevSlide">&#10094;</button>
-    <button class="carousel-btn next" @click="nextSlide">&#10095;</button>
+    <button class="carousel-btn prev" @click="prevSlide" aria-label="Previous Slide">
+      &#10094;
+    </button>
+    <button class="carousel-btn next" @click="nextSlide" aria-label="Next Slide">
+      &#10095;
+    </button>
 
     <!-- 指示器 -->
     <div class="carousel-indicators">
@@ -41,6 +46,7 @@
         :key="index"
         :class="['indicator', { active: currentIndex === index }]"
         @click="goToSlide(index)"
+        :aria-label="`Go to slide ${index + 1}`"
       ></div>
     </div>
   </section>
@@ -86,44 +92,59 @@ export default {
       ],
       currentIndex: 0,
       timer: null,
+      touchStartX: 0,
+      touchEndX: 0,
     };
   },
   mounted() {
     this.startCarousel();
   },
   beforeUnmount() {
-    clearInterval(this.timer);
+    if (this.timer) clearInterval(this.timer);
   },
   methods: {
-    // 开始自动轮播
     startCarousel() {
       this.timer = setInterval(() => {
         this.nextSlide();
-      }, 5000); // 每5秒切换一次
+      }, 5000);
     },
 
-    // 下一张
     nextSlide() {
       this.currentIndex = (this.currentIndex + 1) % this.bannerItems.length;
       this.resetTimer();
     },
 
-    // 上一张
     prevSlide() {
       this.currentIndex = (this.currentIndex - 1 + this.bannerItems.length) % this.bannerItems.length;
       this.resetTimer();
     },
 
-    // 跳转到指定幻灯片
     goToSlide(index) {
       this.currentIndex = index;
       this.resetTimer();
     },
 
-    // 重置自动播放计时器（提升体验）
     resetTimer() {
-      clearInterval(this.timer);
+      if (this.timer) clearInterval(this.timer);
       this.startCarousel();
+    },
+
+    // 触摸开始
+    handleTouchStart(e) {
+      this.touchStartX = e.touches[0].clientX;
+    },
+
+    // 触摸结束
+    handleTouchEnd(e) {
+      this.touchEndX = e.changedTouches[0].clientX;
+      const diff = this.touchStartX - this.touchEndX;
+
+      // 滑动阈值
+      if (diff > 50) {
+        this.nextSlide(); // 左滑 → 下一张
+      } else if (diff < -50) {
+        this.prevSlide(); // 右滑 → 上一张
+      }
     },
   },
 };
@@ -136,13 +157,13 @@ export default {
   color: white;
   overflow: hidden;
   width: 100%;
-  height: 600px;
+  height: 600px; /* PC 默认高度 */
 }
 
 .carousel {
   display: flex;
   width: 100%;
-  transition: transform 1s ease;
+  transition: transform 0.8s ease;
   height: 100%;
 }
 
@@ -166,17 +187,21 @@ export default {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   opacity: 0;
   z-index: 2;
+  max-width: 90%;
+  width: 100%;
 }
 
 .banner-text h1 {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .banner-text p {
   font-size: 20px;
   margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 /* 文字淡入动画 */
@@ -192,7 +217,7 @@ export default {
 }
 
 .animate-text {
-  animation: fadeIn 1.5s forwards;
+  animation: fadeIn 1.2s forwards;
 }
 
 /* 左右箭头按钮 */
@@ -212,22 +237,25 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 10;
+  backdrop-filter: blur(2px);
 }
 
 .carousel-btn:hover {
   background-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .prev {
   left: 20px;
+  right: auto;
 }
 
 .next {
   right: 20px;
+  left: auto;
 }
-
 /* 指示器 */
 .carousel-indicators {
   position: absolute;
@@ -250,18 +278,84 @@ export default {
 
 .indicator.active {
   background-color: white;
+  transform: scale(1.2);
 }
 
-/* 响应式：小屏幕隐藏箭头或调整样式 */
+/* ========================================
+   响应式：移动端适配
+   ======================================== */
+
 @media (max-width: 768px) {
-  .carousel-btn {
-    display: none; /* 可选：移动端隐藏箭头 */
+  .banner {
+    height: 400px; /* 降低轮播图高度 */
   }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    /* left: 10px; */
+    right: 10px;
+  }
+
+  /* 可选：隐藏箭头，依赖滑动操作 */
+  /* .carousel-btn { display: none; } */
+
   .banner-text h1 {
     font-size: 32px;
   }
+
   .banner-text p {
     font-size: 16px;
+  }
+
+  .el-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 350px;
+  }
+
+  .banner-text h1 {
+    font-size: 28px;
+  }
+
+  .banner-text p {
+    font-size: 14px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .carousel-indicators {
+    bottom: 15px;
+  }
+
+  .prev, .next {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
+/* 超小屏或横屏手机 */
+@media (max-height: 500px) and (max-width: 900px) {
+  .banner {
+    height: 300px;
+  }
+
+  .banner-text h1 {
+    font-size: 24px;
+  }
+
+  .banner-text p {
+    font-size: 14px;
   }
 }
 </style>
