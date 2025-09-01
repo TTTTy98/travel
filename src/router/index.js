@@ -46,5 +46,15 @@ export default new Router({
       name: 'Detail',
       component: () => import('@/views/Detail.vue') // 懒加载方式
     },
+    {
+      path: '/OneDayShanghai',
+      name: 'OneDayShanghai',
+      component: () => import('@/views/OneDayShanghai.vue')
+    },
+    {
+      path: '/OneDayChengdu',
+      name: 'OneDayChengdu',
+      component: () => import('@/views/OneDayChengdu.vue')
+    }
   ]
 });
