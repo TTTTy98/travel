@@ -39,13 +39,13 @@
             class="dropdown-menu"
             :class="{ show: menuOpen || desktopMenuOpen || dropdownOpen }"
           >
-            <li @click="closeMenu"><router-link to="/OneDay/Shanghai">Shanghai</router-link></li>
-            <li @click="closeMenu"><router-link to="/OneDay/Chengdu">Chengdu</router-link></li>
+            <li @click="closeMenu"><router-link to="/OneDayShanghai">Shanghai</router-link></li>
+            <li @click="closeMenu"><router-link to="/OneDayChengdu">Chengdu</router-link></li>
           </ul>
         </li>
 
         <!-- 其他菜单项 -->
-        <li @click="closeMenu"><router-link to="/MultiDay">Multi Day Tours</router-link></li>
+        <!-- <li @click="closeMenu"><router-link to="/MultiDay">Multi Day Tours</router-link></li> -->
         <li @click="closeMenu"><router-link to="/Custom">Custom Tour</router-link></li>
         <li @click="closeMenu"><router-link to="/Contact">Contact Us</router-link></li>
       </ul>
