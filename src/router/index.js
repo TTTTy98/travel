@@ -42,7 +42,7 @@ export default new Router({
       component: () => import('@/views/Contact.vue') // 懒加载方式
     },
     {
-      path: '/Detail',
+       path: '/Detail/:id',
       name: 'Detail',
       component: () => import('@/views/Detail.vue') // 懒加载方式
     },

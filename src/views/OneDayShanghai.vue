@@ -6,7 +6,7 @@
       <div class="card-grid">
         <el-row :gutter="20">
           <el-col :span="6" v-for="item in items" :key="item.id">
-            <router-link to="/Detail" style="text-decoration: none; color: inherit;">
+            <router-link :to="`/Detail/${item.id}`" style="text-decoration: none; color: inherit;">
               <el-card :body-style="{ padding: '0px' }" shadow="hover" style="margin-top: 30px;">
                 <img :src="item.image" class="card-image" />
                 <div class="card-content">
@@ -52,16 +52,16 @@ export default {
         },
         {
           id: 2,
-          title: "Glimpse Into Imperial Splendor",
-          adultPrice: 191.36,
-          childPrice: 120,
+          title: "Fengjing Watertown: A Journey into Shanghai’s Hidden Waterways",
+          adultPrice: 159,
+          childPrice: 119,
           image: Tour2
         },
         {
           id: 3,
-          title: "Cantonese Cooking and Tasting",
-          adultPrice: 265.65,
-          childPrice: 180,
+          title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise",
+          adultPrice: 169,
+          childPrice:129,
           image: Tour3
         }
       ]

@@ -35,26 +35,24 @@
         <!-- 右侧产品信息 -->
         <el-col :span="10">
           <div class="product-info-simple">
-            <h1 class="main-title">Taste of Tradition: Shanghai Breakfast Tour</h1>
-
+            <h1 class="main-title">{{ tourInfo.title }}</h1>
 
             <div class="price-section">
               <div class="price-item adult-price">
-                Adult: <span class="price-amount">$69</span>/Pax
+                Adult: <span class="price-amount">${{ formatPrice(tourInfo.adultPrice) }}</span>/Pax
               </div>
               <div class="price-item child-price">
-                Child: <span class="price-amount">$50</span>/Pax
+                Child: <span class="price-amount">${{ formatPrice(tourInfo.childPrice) }}</span>/Pax
               </div>
             </div>
 
             <div class="age-note">
-              Adult ages 13 and above, Child ages 4–12
+              {{ tourInfo.ageNote }}
             </div>
           </div>
         </el-col>
       </el-row>
     </section>
-
     <!-- 详情 Tabs -->
     <div style="
         display: flex;
@@ -64,112 +62,277 @@
       ">
       <el-tabs v-model="activeName" @tab-click="handleClick" style="width: 100%">
         <el-tab-pane label="Overview" name="first">
-          Start your day the Shanghai way—through its breakfast tables and historic streets. This walking food tour
-          combines authentic morning flavors with stories hidden behind the city’s landmarks. From century-old dessert
-          shops and bustling food stalls to iconic boulevards like Nanjing Road, People’s Square, Suzhou Creek, and the
-          Bund, you’ll explore how Shanghai grew from a riverside town into a global metropolis—all while tasting the
-          dishes that fuel the city every morning. Perfect for first-time visitors and long-term residents alike, this
-          journey blends culinary discovery and cultural immersion in just a few hours.
-          <p><span style="font-weight: bold;">What You’ll Experience</span></p>
-          <ul>
-            <li> <span class="bold-text">Soup Dumplings Restaurant (est. 1986)</span>
-              <p>Taste Shanghai’s iconic xiaolongbao: thin-skinned dumplings
-                bursting with crab roe broth. Alongside them, enjoy a tender pork chop with surprising Western influence
-                and a comforting bowl of wontons in soup—each dish reflecting the city’s culinary evolution.</p>
-            </li>
-            <li> <span class="bold-text">Rice Sweets Restaurant (est. 1875)</span>
-              <p>Begin with chewy glutinous rice cakes that have been a local favorite on Nanjing Road for over a
-                century. The fillings—red bean or sesame—strike a balance of sweetness and nuttiness. Pair them with a
-                warm cup of soy milk, a breakfast combination deeply rooted in Shanghai traditions.</p>
-            </li>
-            <li> <span class="bold-text">Nanjing Road</span>
-              <p>Once the city’s commercial heart, Nanjing Road remains one of Shanghai’s busiest shopping avenues.</p>
-            </li>
-            <li><span class="bold-text">People’s Square</span>
-              <p>Take a leisurely walk through People’s Square, the cultural heart of Shanghai, and let the flavors of
-                your meal settle as you wander. Nearby, discover a historic cinema and grand hotel that once towered as
-                the city’s highest landmark for half a century. Just steps away, People’s Park bursts with
-                life—especially on weekends, when the famous marriage market unfolds, where parents gather to find
-                matches for their children.</p>
-            </li>
-            <li><span class="bold-text">Shengjian Bun Eatery (since 1994)</span>
-              <p>No trip to Shanghai is complete without tasting Shengjian, the city’s signature pan-fried bun. Its
-                golden, crunchy crust gives way to juicy fillings, often enjoyed alongside a warm bowl of glass noodle
-                soup. Hear stories of the rivalries between two local bun-making traditions, much like the debate
-                between Coca-Cola and Pepsi.</p>
-            </li>
-            <li><span class="bold-text">Traditional Chinese Dessert House (est. 1851)</span>
-              <p>Indulge your sweet tooth with a traditional stewed milk pudding, a dessert with roots in southern China
-                since the 19th century, now cherished nationwide for its silky richness. For something fruity, try the
-                mango-inspired creations, a refreshing twist beloved by dessert lovers.</p>
-            </li>
-            <li><span class="bold-text">Scallion Pancake Stall</span>
-              <p>Another street-food favorite is the scallion pancake, made by layering dough with fragrant green
-                onions, then pan-fried until crispy and aromatic. The result is a snack that’s flaky, savory, and
-                irresistibly satisfying.</p>
-            </li>
-            <li><span class="bold-text">Suzhou Creek</span>
-              <p>Enjoy one of the most underrated skyline views of Pudong. Along the way, discover how the Huangpu River
-                and Suzhou Creek helped Shanghai transform from a quiet water town into an international metropolis.</p>
-            </li>
-            <li><span class="bold-text">The Bund</span>
-              <p>Finally, immerse yourself in the grandeur of the Bund, Shanghai’s iconic waterfront. Once called the
-                “Number One Street in the Far East,” it was the stage where international talent and capital converged,
-                creating a dazzling display of prosperity. Behind the grand facades lie untold stories of the city’s
-                golden era and its defining moments in history.</p>
-            </li>
-            <li><span class="bold-text">Scallion Pancake Stall</span>
-              <p></p>
-            </li>
-          </ul>
+          <div v-if="tourInfo.id === 1">
+            Start your day the Shanghai way—through its breakfast tables and historic streets. This walking food tour
+            combines authentic morning flavors with stories hidden behind the city’s landmarks. From century-old dessert
+            shops and bustling food stalls to iconic boulevards like Nanjing Road, People’s Square, Suzhou Creek, and
+            the
+            Bund, you’ll explore how Shanghai grew from a riverside town into a global metropolis—all while tasting the
+            dishes that fuel the city every morning. Perfect for first-time visitors and long-term residents alike, this
+            journey blends culinary discovery and cultural immersion in just a few hours.
+            <p><span style="font-weight: bold;">What You’ll Experience</span></p>
+            <ul>
+              <li> <span class="bold-text">Soup Dumplings Restaurant (est. 1986)</span>
+                <p>Taste Shanghai’s iconic xiaolongbao: thin-skinned dumplings
+                  bursting with crab roe broth. Alongside them, enjoy a tender pork chop with surprising Western
+                  influence
+                  and a comforting bowl of wontons in soup—each dish reflecting the city’s culinary evolution.</p>
+              </li>
+              <li> <span class="bold-text">Rice Sweets Restaurant (est. 1875)</span>
+                <p>Begin with chewy glutinous rice cakes that have been a local favorite on Nanjing Road for over a
+                  century. The fillings—red bean or sesame—strike a balance of sweetness and nuttiness. Pair them with a
+                  warm cup of soy milk, a breakfast combination deeply rooted in Shanghai traditions.</p>
+              </li>
+              <li> <span class="bold-text">Nanjing Road</span>
+                <p>Once the city’s commercial heart, Nanjing Road remains one of Shanghai’s busiest shopping avenues.
+                </p>
+              </li>
+              <li><span class="bold-text">People’s Square</span>
+                <p>Take a leisurely walk through People’s Square, the cultural heart of Shanghai, and let the flavors of
+                  your meal settle as you wander. Nearby, discover a historic cinema and grand hotel that once towered
+                  as
+                  the city’s highest landmark for half a century. Just steps away, People’s Park bursts with
+                  life—especially on weekends, when the famous marriage market unfolds, where parents gather to find
+                  matches for their children.</p>
+              </li>
+              <li><span class="bold-text">Shengjian Bun Eatery (since 1994)</span>
+                <p>No trip to Shanghai is complete without tasting Shengjian, the city’s signature pan-fried bun. Its
+                  golden, crunchy crust gives way to juicy fillings, often enjoyed alongside a warm bowl of glass noodle
+                  soup. Hear stories of the rivalries between two local bun-making traditions, much like the debate
+                  between Coca-Cola and Pepsi.</p>
+              </li>
+              <li><span class="bold-text">Traditional Chinese Dessert House (est. 1851)</span>
+                <p>Indulge your sweet tooth with a traditional stewed milk pudding, a dessert with roots in southern
+                  China
+                  since the 19th century, now cherished nationwide for its silky richness. For something fruity, try the
+                  mango-inspired creations, a refreshing twist beloved by dessert lovers.</p>
+              </li>
+              <li><span class="bold-text">Scallion Pancake Stall</span>
+                <p>Another street-food favorite is the scallion pancake, made by layering dough with fragrant green
+                  onions, then pan-fried until crispy and aromatic. The result is a snack that’s flaky, savory, and
+                  irresistibly satisfying.</p>
+              </li>
+              <li><span class="bold-text">Suzhou Creek</span>
+                <p>Enjoy one of the most underrated skyline views of Pudong. Along the way, discover how the Huangpu
+                  River
+                  and Suzhou Creek helped Shanghai transform from a quiet water town into an international metropolis.
+                </p>
+              </li>
+              <li><span class="bold-text">The Bund</span>
+                <p>Finally, immerse yourself in the grandeur of the Bund, Shanghai’s iconic waterfront. Once called the
+                  “Number One Street in the Far East,” it was the stage where international talent and capital
+                  converged,
+                  creating a dazzling display of prosperity. Behind the grand facades lie untold stories of the city’s
+                  golden era and its defining moments in history.</p>
+              </li>
+              <li><span class="bold-text">Scallion Pancake Stall</span>
+                <p></p>
+              </li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 2">
+            <div>
+              Fengjing watertowns remains one of the few places where authentic daily life still flows alongside its
+              canals. Here, locals sell homemade snacks, converse in Shanghainese, and live much as they have for
+              generations.</div>
+            <div>
+              On this guided day trip, you’ll wander cobbled alleys, admire centuries-old bridges, and visit cultural
+              landmarks that reveal the town’s rich past—from a grand merchant’s mansion to the preserved site of a
+              Mao-era People’s Commune with its secret underground bunkers. Drift along the waterways on a private boat,
+              savor authentic Shanghai dishes by the river, and hear fascinating stories of education, trade, and
+              resilience that shaped the town’s character.</div>
+            <div>
+              Just an hour’s drive from Shanghai, Fengjing offers a serene escape from the city and a chance to
+              experience
+              the essence of a living watertown—intimate, historical, and deeply local.
+            </div>
+          </div>
+          <div v-if="tourInfo.id === 3">
+            <div>
+              Just an hour from central Shanghai, Zhujiajiao is a sprawling historic water town with over 1,700 years of
+              history, renowned for its 36 ancient stone bridges and well-preserved Ming and Qing architecture. The
+              town’s streets are dense and charming, and its waterways form a picturesque grid, creating a classic
+              Jiangnan water-town atmosphere that has endured for centuries.</div>
+            <div>
+              Among its many bridges, the Fangsheng Bridge stands out as the town’s most iconic landmark. Built over 500
+              years ago, this elegant stone bridge features three graceful arches and a gently curved walkway.
+              Historically, locals would release fish and turtles here for good luck, giving the bridge its name, which
+              means “Life Release Bridge.” Today, it remains a symbol of Zhujiajiao’s charm and history, perfect for
+              strolling, photography, and admiring the surrounding canals.</div>
+            <div>
+              Visitors can wander along stone-paved streets, cross historic bridges, or take a boat ride along the
+              canals for a unique view of the town. The town also offers a variety of riverside restaurants, cozy cafés,
+              and lively snack streets, making it easy to enjoy local delicacies while soaking in the serene scenery.
+            </div>
+            <div>
+              With its extensive size, historic charm, dense waterways, and vibrant yet relaxed atmosphere, Zhujiajiao
+              is ideal for travelers seeking cultural exploration, photography, and a full-day escape into classic
+              Jiangnan life just outside Shanghai.
+            </div>
+          </div>
         </el-tab-pane>
         <el-tab-pane label="Highlights" name="second">
+          <div v-if="tourInfo.id === 1"></div>
           <ul>
             <li><span class="bold-text">Authentic Breakfast Tastes–</span> Savor egg pancakes, soup dumplings,
-            crispy buns, scallion pancakes, and traditional Chinese desserts, many from time-honored restaurants dating
-            back over a century.</li>
+              crispy buns, scallion pancakes, and traditional Chinese desserts, many from time-honored restaurants
+              dating
+              back over a century.</li>
             <li><span class="bold-text">Hidden Food Stories –</span>
-            Learn the origins and rivalries behind Shanghai’s breakfast classics, from the debate over pan-fried buns to
-            the city’s unique Western influences on local dishes.</li>
+              Learn the origins and rivalries behind Shanghai’s breakfast classics, from the debate over pan-fried buns
+              to
+              the city’s unique Western influences on local dishes.</li>
             <li><span class="bold-text"> Historic Walk –</span>Pass through Nanjing Road,
-            once China’s first commercial hub; stroll People’s Square and uncover the history of its cinema, hotels, and
-            even its weekend marriage market.</li>
+              once China’s first commercial hub; stroll People’s Square and uncover the history of its cinema, hotels,
+              and
+              even its weekend marriage market.</li>
             <li><span class="bold-text">Cultural Landmarks –</span> Take in the skyline
-            from Suzhou Creek and walk along the Bund, discovering untold stories of how Shanghai became the “No.1 city
-            of the Far East.”</li>
+              from Suzhou Creek and walk along the Bund, discovering untold stories of how Shanghai became the “No.1
+              city
+              of the Far East.”</li>
             <li><span class="bold-text"> Perfect Morning Experience –</span> A compact
-            yet rich journey that satisfies both the stomach and the mind, combining food, history, and culture.</li>
+              yet rich journey that satisfies both the stomach and the mind, combining food, history, and culture.</li>
           </ul>
- 
-    
-        </el-tab-pane>
-        <el-tab-pane label="Cost" name="third">
-          <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
-          <ul>
-            <li>Professional English-speaking guide</li>
-            <li>Hearty traditional Chinese breakfast at 5+ authentic local eateries (enough to keep you satisfied for the rest of the morning)</li>
-            <li>Private taxi transfer from People’s Square to Suzhou Creek</li>
+          <div v-if="tourInfo.id === 2">
+            <ul>
+              <li>Wander through an authentic watertown still alive with local traditions</li>
+              <li>Glide along tranquil canals on a private boat ride beneath ancient bridges</li>
+              <li>Savor a riverside lunch featuring authentic Shanghai home-style cooking</li>
+              <li>Step inside a traditional mansion once owned by a wealthy local family</li>
+              <li>Explore a rare Mao-era People’s Commune site and its underground bunkers</li>
+            </ul>
+          </div>
+            <div v-if="tourInfo.id === 3">
+              <ul>
+            <li><span class="bold-text">Historic Water Town</span>– Over 1,700 years of history and a sprawling layout to explore.</li>
+            <li><span class="bold-text">36 Ancient Stone Bridges </span>–
+             Including the iconic Fangsheng Bridge, built over 500 years ago.</li>
+            <li><span class="bold-text"> Ming & Qing Architecture </span>– Well-preserved traditional houses lining stone-paved streets.</li>
+            <li><span class="bold-text">Picturesque Canals </span>– Waterways crisscross the town, perfect for photography and exploration.</li>
+            <li><span class="bold-text"> Boat Ride Experience </span>– Leisurely boat tours through the canals for a unique perspective.</li>
+            <li><span class="bold-text"> Riverside Dining </span>– Cafés and restaurants along the canals for local snacks and meals.</li>
+            <li><span class="bold-text"> Cultural Immersion </span>– Stroll through lively streets, observe traditional crafts, and daily life.</li>
           </ul>
-          <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
-          <ul>
-            <li>Hotel pickup and drop-off</li>
-            <li>Personal expenses such as additional food, drinks, or shopping</li>
-            <li>Gratuities for the guide</li>
-          </ul>
+            </div>
         </el-tab-pane>
-        <el-tab-pane label="Itinerary" name="fourth">
-          <p style="margin-top: 2%;">9:30AM - 11:30AM: Visit Panda Valley</p>
-          <p style="margin-top: 2%;">12:00PM - 1:00PM: Lunch</p>
-          <p style="margin-top: 2%;">1:30PM - 3:00PM: Learn Kung Fu or Tai Chi</p>
-          <p style="margin-top: 2%;">3:30PM - 4:00PM: Visit Zhongshu Bookstore</p>
-          <p style="margin-top: 2%;">4:30PM - 5:30PM: Visit Yangtianwo Square and Nanqiao Bridge</p>
+         <el-tab-pane label="Itinerary" name="third">
+          <div v-if="tourInfo.id === 1">
+            <ul>
+              <li><span class="bold-text"> 8:30 / 9:00 AM | Meet Your Guide</span> Gather at McDonald’s, Location:
+                McDonald’s, 720 Nanjing East Road, Huangpu District, Shanghai, China, 200070.<a
+                  href="https://maps.app.goo.gl/yQqhATQ7HK61Nih37">（Open in google maps）</a> </li>
+
+              <li><span class="bold-text">Begin the Food Walk</span>Start your journey with authentic Shanghai
+                breakfasts
+                and desserts at several time-honored restaurants，strolling through landmarks such as Nanjing Road,
+                People’s Square, Suzhou Creek, and the Bund. Along the way, taste local specialties like soup dumplings,
+                crispy buns, scallion pancakes, and traditional desserts from century-old restaurants.</li>
+              <li><span class="bold-text">Tour Duration</span> The walk typically lasts around 4 hours, covering
+                approximately 4.5 kilometers. Please wear suitable walking shoes, and prepare an umbrella in case of
+                rainy
+                weather.</li>
+              <li><span class="bold-text"> End Point</span> The tour concludes at the Bund, where the Huangpu River and
+                Shanghai’s skyline create the city’s most iconic view.</li>
+              <li><span class="bold-text">Please Note</span> Hotel pickup and drop-off are not included in this tour.
+              </li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 2">
+            <div class="bold-text">Morning (9:00 AM):</div>
+            <div>Pick up from hotel. Travel by private car to Fengjing Watertown, located about 60 km away (1–1.5 hours’
+              drive). Along the way, your guide will share insights into Shanghai life and history.</div>
+            <div class="bold-text">Daytime in Fengjing:</div>
+            <ul>
+              <li> Stroll through riverside alleys and sample traditional snacks</li>
+
+              <li>Visit the Wang Family Mansion, a historic residence reflecting traditional Chinese architecture and
+                values</li>
+              <li>Cross centuries-old stone bridges and enjoy scenic canal views</li>
+              <li>Explore the Former People’s Commune site and hidden bunker system from the Mao era</li>
+              <li>Sit down for a hearty riverside lunch featuring authentic Shanghai dishes prepared by local families
+              </li>
+              <li>Enjoy a private boat ride through the waterways, gliding past historic houses and ancient bridges</li>
+              <li>Discover the Former Residence of a Zhuangyuan, and learn about China’s imperial examination system
+              </li>
+
+
+            </ul>
+            <div class="bold-text">Afternoon:</div>
+            <div>Return journey by private car to Shanghai city center (1–1.5 hours).</div>
+            <div class="bold-text">Total duration:</div>
+            <div> Approximately 6–7 hours</div>
+          </div>
+          <div v-if="tourInfo.id === 3">
+            <div class="bold-text">Morning – Departure from Shanghai:</div>
+            <div>Pick up from hotel. Travel by private car to Fengjing Watertown, located about 60 km away (1–1.5 hours’ drive). Along the way, your guide will share insights into Shanghai life and history.</div>
+            <div class="bold-text">Daytime – Explore Zhujiajiao:</div>
+            <ul>
+              <li> Stroll along stone-paved streets and cross centuries-old bridges, including the iconic Fangsheng Bridge.</li>
+
+              <li>Take a boat ride along the canals to experience the town from a unique perspective.</li>
+              <li>Enjoy a riverside lunch at a local café or restaurant, savoring fresh local delicacies while soaking in the serene scenery.</li>
+              <li>Explore historic alleys, traditional shops, and cultural spots, capturing photos of charming bridges and waterways.</li>
+              
+
+
+            </ul>
+            <div class="bold-text">Afternoon– Return to Shanghai:</div>
+            <div>Return journey by private car to Shanghai city center (1–1.5 hours)</div>
+            <div class="bold-text">Total duration:</div>
+            <div> Approximately 6–7 hours</div>
+          </div>
         </el-tab-pane>
-        <el-tab-pane label="Important Info" name="fifth">
-          <p>
-            Cancellation Policy: Clients must cancel their reservations at least 24 hours before the tour starts to
-            receive a refund; otherwise, no fees will be refunded.
-          </p>
+        <el-tab-pane label="Cost" name="fourth">
+          <div v-if="tourInfo.id === 1">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Professional English-speaking guide </li>
+              <li>Hearty traditional Chinese breakfast at 5+ authentic local eateries (enough to keep you satisfied for
+                the rest of the morning)</li>
+              <li>Private taxi transfer from People’s Square to Suzhou Creek</li>
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Hotel pickup and drop-off</li>
+              <li>Personal expenses such as additional food, drinks, or shopping</li>
+              <li>Gratuities for the guide</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 2">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Professional English-speaking guide </li>
+              <li>Private car transfer with pick-up and drop-off from your hotel or chosen location</li>
+              <li>Authentic Shanghai-style lunch and selected local snacks</li>
+              <li>Private boat ride along Fengjing’s waterways</li>
+              <li>Entry to the Former Site of the People’s Commune and bunker system</li>
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Personal expenses (shopping, additional food or drinks)</li>
+              <li>Gratuities for guide and driver</li>
+
+            </ul>
+          </div>
+           <div v-if="tourInfo.id === 3">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Professional English-speaking guide </li>
+              <li>Private car transfer with pick-up and drop-off from your hotel or chosen location</li>
+              <li>Authentic Shanghai-style lunch</li>
+              <li>Boat ride</li>
+              
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Personal expenses (shopping, additional food or drinks)</li>
+              <li>Gratuities for guide and driver</li>
+
+            </ul>
+           </div>
         </el-tab-pane>
+        
+   
       </el-tabs>
     </div>
   </div>
@@ -177,6 +340,7 @@
 
 <script>
 import Header from "@/components/Header.vue";
+// Tour 1 images
 import img1 from '@/assets/sh-1-1.jpg';
 import img2 from '@/assets/sh-1-2.jpg';
 import img3 from '@/assets/sh-1-3.jpg';
@@ -186,6 +350,25 @@ import img6 from '@/assets/sh-1-6.jpg';
 import img7 from '@/assets/sh-1-7.jpg';
 import img8 from '@/assets/sh-1-8.jpg';
 
+// Tour 2 images
+import img9 from '@/assets/sh-2-1.jpg';
+import img10 from '@/assets/sh-2-2.jpg';
+import img11 from '@/assets/sh-2-3.jpg';
+import img12 from '@/assets/sh-2-4.jpg';
+import img13 from '@/assets/sh-2-5.jpg';
+import img14 from '@/assets/sh-2-6.jpg';
+import img15 from '@/assets/sh-2-7.jpg';
+import img16 from '@/assets/sh-2-8.jpg';
+
+// Tour 3 images
+import img17 from '@/assets/sh-3-1.jpg';
+import img18 from '@/assets/sh-3-2.jpg';
+import img19 from '@/assets/sh-3-3.jpg';
+import img20 from '@/assets/sh-3-4.jpg';
+import img21 from '@/assets/sh-3-5.jpg';
+import img22 from '@/assets/sh-3-6.jpg';
+import img23 from '@/assets/sh-3-7.jpg';
+import img24 from '@/assets/sh-3-8.jpg';
 export default {
   name: "Detail",
   components: {
@@ -193,8 +376,15 @@ export default {
   },
   data() {
     return {
-      images: [img1, img2, img3, img4, img5, img6, img7, img8],
-      currentImage: img1,
+      tourInfo: {
+        id: null,
+        title: "",
+        adultPrice: 0,
+        childPrice: 0,
+        ageNote: "Adult ages 13 and above, Child ages 4–12"
+      },
+      images: [],
+      currentImage: '',
       showZoom: false,
       maskLeft: 0,
       maskTop: 0,
@@ -203,9 +393,9 @@ export default {
       imageWidth: 0,
       imageHeight: 0,
       activeName: 'first',
-      intervalId: null,     // 定时器 ID
-      autoPlay: true,       // 是否自动播放
-      slideInterval: 5000   // 切换间隔：3秒
+      intervalId: null,
+      autoPlay: true,
+      slideInterval: 5000
     };
   },
   computed: {
@@ -221,9 +411,11 @@ export default {
     }
   },
   mounted() {
+    const id = parseInt(this.$route.params.id);
+    this.loadTourData(id);
     this.setImageSize();
     window.addEventListener('resize', this.setImageSize);
-    if (this.autoPlay) {
+    if (this.autoPlay && this.images.length > 1) {
       this.startAutoPlay();
     }
   },
@@ -232,10 +424,34 @@ export default {
     this.stopAutoPlay();
   },
   methods: {
+    formatPrice(price) {
+      return Number(price).toFixed(2);
+    },
+    loadTourData(id) {
+      this.tourInfo.id = id;
+
+      if (id === 1) {
+        this.images = [img1, img2, img3, img4, img5, img6, img7, img8];
+        this.tourInfo.title = "Taste of Tradition: Shanghai Breakfast Tour";
+        this.tourInfo.adultPrice = 69;
+        this.tourInfo.childPrice = 50;
+      } else if (id === 2) {
+        this.images = [img9, img10, img11, img12, img13, img14, img15, img16];
+        this.tourInfo.title = "Fengjing Watertown: A Journey into Shanghai’s Hidden Waterways";
+        this.tourInfo.adultPrice = 159;
+        this.tourInfo.childPrice = 119;
+      } else if (id === 3) {
+        this.images = [img17, img18, img19, img20, img21, img22, img23, img24];
+        this.tourInfo.title = "Zhujiajiao Watertown: Historic Water Town & Canal Cruise";
+        this.tourInfo.adultPrice = 169;
+        this.tourInfo.childPrice = 129;
+      }
+
+      this.currentImage = this.images.length > 0 ? this.images[0] : '';
+    },
     setActiveImage(img) {
       this.currentImage = img;
       this.showZoom = false;
-      // 可选：用户手动切换后，重置自动播放（避免打断体验）
       this.resetAutoPlay();
     },
     nextImage() {
@@ -245,6 +461,8 @@ export default {
       this.showZoom = false;
     },
     startAutoPlay() {
+      this.stopAutoPlay();
+      if (this.images.length <= 1) return;
       this.intervalId = setInterval(() => {
         this.nextImage();
       }, this.slideInterval);
@@ -256,9 +474,8 @@ export default {
       }
     },
     resetAutoPlay() {
-      // 停止并重新开始，确保用户操作后不会立即切换
       this.stopAutoPlay();
-      if (this.autoPlay) {
+      if (this.autoPlay && this.images.length > 1) {
         setTimeout(() => {
           this.startAutoPlay();
         }, this.slideInterval);
@@ -271,31 +488,20 @@ export default {
         this.imageHeight = img.clientHeight;
       }
     },
-    // 放大镜方法（当前未启用，保留结构）
-    handleMouseMove(e) {
-      const rect = this.$refs.mainImage.getBoundingClientRect();
-      let x = e.clientX - rect.left;
-      let y = e.clientY - rect.top;
-
-      let maskX = x - this.maskSize / 2;
-      let maskY = y - this.maskSize / 2;
-
-      maskX = Math.max(0, Math.min(maskX, rect.width - this.maskSize));
-      maskY = Math.max(0, Math.min(maskY, rect.height - this.maskSize));
-
-      this.maskLeft = maskX;
-      this.maskTop = maskY;
-      this.showZoom = true;
-    },
-    hideZoom() {
-      this.showZoom = false;
-    },
     handleClick(tab) {
       // Tab 切换回调
+    }
+  },
+  watch: {
+    '$route.params.id'(newId) {
+      const id = parseInt(newId);
+      this.loadTourData(id);
+      this.resetAutoPlay();
     }
   }
 };
 </script>
+
 
 <style scoped>
 .homepage {
@@ -428,5 +634,18 @@ export default {
   font-weight: bold;
   color: #d4a574;
   /* 可选：用品牌色突出关键信息 */
+}
+
+a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  color: #0000ff;
 }
 </style>
