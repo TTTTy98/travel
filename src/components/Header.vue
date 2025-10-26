@@ -184,7 +184,7 @@ header {
 
 /* 导航栏 */
 .navbar {
-  background-color: skyblue;
+  background: linear-gradient(148.01deg,#83defc 12.49%,#377af5 61.43%,#88cb9e 90.83%);
   display: flex;
   justify-content: center;
   height: 50px;
@@ -217,7 +217,7 @@ header {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #0095dd;
+  background-color: #4b91f5e0;
   min-width: 150px;
   border-radius: 4px;
   overflow: hidden;
@@ -292,7 +292,7 @@ header {
     overflow: hidden;
     transition: height 0.4s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    background-color: skyblue;
+    background: linear-gradient(148.01deg,#83defc 12.49%,#377af5 61.43%,#88cb9e 90.83%);
   }
 
   .navbar.mobile-active {

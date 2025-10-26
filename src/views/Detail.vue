@@ -170,6 +170,32 @@
               Jiangnan life just outside Shanghai.
             </div>
           </div>
+          <div v-if="tourInfo.id === 4">
+            <div>Mount Qingcheng, often hailed as the birthplace of Taoism, stands as a living symbol of China's rich
+              spiritual heritage. Rising to about 1,600 meters, the mountain offers a leisurely yet rewarding hike, with
+              ancient Taoist temples scattered along forested trails. For travelers seeking peace, reflection, or a
+              glimpse into Taoist wisdom, it's an inspiring journey through both culture and nature.</div>
+            <div>Not far away lies Panda Valley, a conservation park that differs from the well-known Panda Base. Here,
+              the environment is designed to mirror the wilderness, allowing pandas to roam in surroundings that
+              encourage their natural behaviors. Visitors can enjoy a closer, more authentic encounter with these gentle
+              creatures while learning about ongoing efforts in research and preservation.</div>
+            <div>This one-day excursion blends spiritual exploration with ecological discovery, offering a deeper
+              connection to Sichuan's cultural roots and its most beloved wildlife.</div>
+          </div>
+          <div v-if="tourInfo.id === 5">
+            <div>Just a short trip from Chengdu, Mount Emei, a UNESCO World Heritage site, invites travelers into a
+              breathtaking sanctuary of biodiversity and the spiritual heart of Chinese Buddhism. Wander through
+              towering ancient forests and marvel at the vibrant flora and diverse wildlife that showcase nature's
+              grandeur. Along scenic trails, centuries-old monasteries resonate with timeless spiritual chants, offering
+              a glimpse into a world of reflection and peace. At the summit, golden Buddhist temples glow under the soft
+              light of sunrise or sunset, creating views that inspire awe and leave lasting memories.</div>
+            <div>Complementing the mountain's majesty, Huanglongxi Ancient Town enchants visitors with its winding river
+              at the heart and traditional Sichuanese architecture. Stroll across elegant stone bridges arching
+              gracefully over the water, soak in the tranquil, historic ambiance, and imagine life in a classic
+              riverside settlement where history seems to linger in every corner.</div>
+            <div>This day trip is a perfect blend of natural wonder, spiritual heritage, and timeless charm, offering an
+              unforgettable experience for travelers seeking both adventure and serenity.</div>
+          </div>
         </el-tab-pane>
         <el-tab-pane label="Highlights" name="second">
           <div v-if="tourInfo.id === 1"></div>
@@ -202,20 +228,49 @@
               <li>Explore a rare Mao-era People’s Commune site and its underground bunkers</li>
             </ul>
           </div>
-            <div v-if="tourInfo.id === 3">
-              <ul>
-            <li><span class="bold-text">Historic Water Town</span>– Over 1,700 years of history and a sprawling layout to explore.</li>
-            <li><span class="bold-text">36 Ancient Stone Bridges </span>–
-             Including the iconic Fangsheng Bridge, built over 500 years ago.</li>
-            <li><span class="bold-text"> Ming & Qing Architecture </span>– Well-preserved traditional houses lining stone-paved streets.</li>
-            <li><span class="bold-text">Picturesque Canals </span>– Waterways crisscross the town, perfect for photography and exploration.</li>
-            <li><span class="bold-text"> Boat Ride Experience </span>– Leisurely boat tours through the canals for a unique perspective.</li>
-            <li><span class="bold-text"> Riverside Dining </span>– Cafés and restaurants along the canals for local snacks and meals.</li>
-            <li><span class="bold-text"> Cultural Immersion </span>– Stroll through lively streets, observe traditional crafts, and daily life.</li>
-          </ul>
-            </div>
+          <div v-if="tourInfo.id === 3">
+            <ul>
+              <li><span class="bold-text">Historic Water Town</span>– Over 1,700 years of history and a sprawling layout
+                to explore.</li>
+              <li><span class="bold-text">36 Ancient Stone Bridges </span>–
+                Including the iconic Fangsheng Bridge, built over 500 years ago.</li>
+              <li><span class="bold-text"> Ming & Qing Architecture </span>– Well-preserved traditional houses lining
+                stone-paved streets.</li>
+              <li><span class="bold-text">Picturesque Canals </span>– Waterways crisscross the town, perfect for
+                photography and exploration.</li>
+              <li><span class="bold-text"> Boat Ride Experience </span>– Leisurely boat tours through the canals for a
+                unique perspective.</li>
+              <li><span class="bold-text"> Riverside Dining </span>– Cafés and restaurants along the canals for local
+                snacks and meals.</li>
+              <li><span class="bold-text"> Cultural Immersion </span>– Stroll through lively streets, observe
+                traditional crafts, and daily life.</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 4">
+            <ul>
+              <li><span class="bold-text">Roots of Taoism</span> – Journey to Mount Qingcheng, where Taoism first
+                flourished, rich in history and legend.</li>
+              <li><span class="bold-text">Scenic Hike</span> – Trek along forested paths on a gentle 1,600-meter ascent,
+                ideal for nature lovers.</li>
+              <li><span class="bold-text">Close Panda Encounters</span> – Witness giant pandas in a setting that mirrors
+                their natural wilderness.</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 5">
+            <ul>
+              <li><span class="bold-text">Immerse in Emei's Ancient Wilderness</span> – Step into lush, age-old forests
+                alive with diverse flora and vibrant wildlife.</li>
+              <li><span class="bold-text">Feel the Pulse of Sacred Monasteries</span> – Wander through historic temples
+                where centuries-old Buddhist chants create a serene atmosphere.</li>
+              <li><span class="bold-text">Marvel at the Golden Summit</span> – Stand in awe before the gleaming gilded
+                temples crowning Mount Emei, especially breathtaking at sunrise or sunset.</li>
+              <li><span class="bold-text">Stroll Huanglongxi's Tranquil Waterways</span> – Meander along calm rivers
+                flanked by traditional Sichuanese architecture, and soak in the timeless charm of this ancient town.
+              </li>
+            </ul>
+          </div>
         </el-tab-pane>
-         <el-tab-pane label="Itinerary" name="third">
+        <el-tab-pane label="Itinerary" name="third">
           <div v-if="tourInfo.id === 1">
             <ul>
               <li><span class="bold-text"> 8:30 / 9:00 AM | Meet Your Guide</span> Gather at McDonald’s, Location:
@@ -264,15 +319,19 @@
           </div>
           <div v-if="tourInfo.id === 3">
             <div class="bold-text">Morning – Departure from Shanghai:</div>
-            <div>Pick up from hotel. Travel by private car to Fengjing Watertown, located about 60 km away (1–1.5 hours’ drive). Along the way, your guide will share insights into Shanghai life and history.</div>
+            <div>Pick up from hotel. Travel by private car to Fengjing Watertown, located about 60 km away (1–1.5 hours’
+              drive). Along the way, your guide will share insights into Shanghai life and history.</div>
             <div class="bold-text">Daytime – Explore Zhujiajiao:</div>
             <ul>
-              <li> Stroll along stone-paved streets and cross centuries-old bridges, including the iconic Fangsheng Bridge.</li>
+              <li> Stroll along stone-paved streets and cross centuries-old bridges, including the iconic Fangsheng
+                Bridge.</li>
 
               <li>Take a boat ride along the canals to experience the town from a unique perspective.</li>
-              <li>Enjoy a riverside lunch at a local café or restaurant, savoring fresh local delicacies while soaking in the serene scenery.</li>
-              <li>Explore historic alleys, traditional shops, and cultural spots, capturing photos of charming bridges and waterways.</li>
-              
+              <li>Enjoy a riverside lunch at a local café or restaurant, savoring fresh local delicacies while soaking
+                in the serene scenery.</li>
+              <li>Explore historic alleys, traditional shops, and cultural spots, capturing photos of charming bridges
+                and waterways.</li>
+
 
 
             </ul>
@@ -280,6 +339,34 @@
             <div>Return journey by private car to Shanghai city center (1–1.5 hours)</div>
             <div class="bold-text">Total duration:</div>
             <div> Approximately 6–7 hours</div>
+          </div>
+          <div v-if="tourInfo.id === 4">
+            <ul>
+              <li><span class="bold-text">8:00 AM</span> – Pick up from your hotel and start your day of adventure</li>
+              <li><span class="bold-text">9:30 AM – 11:30 AM</span> – Explore Panda Valley, observing pandas in a
+                naturalistic habitat and capturing their playful moments</li>
+              <li><span class="bold-text">12:30 PM</span> – Enjoy a relaxing lunch break, refueling for the afternoon's
+                journey</li>
+              <li><span class="bold-text">1:30 PM – 4:30 PM</span> – Hike through Mount Qingcheng, wandering scenic
+                trails, ancient temples, and serene spots that reveal the heart of Taoist culture</li>
+              <li><span class="bold-text">5:30 PM</span> – Return to your hotel, concluding a day of wildlife wonders
+                and spiritual discovery</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 5">
+            <ul>
+              <li><span class="bold-text">7:50 AM – Hotel Pickup</span> – Begin your day with a comfortable pickup from
+                your hotel, ready for a scenic adventure.</li>
+              <li><span class="bold-text">10:00 AM – 12:00 PM – Explore Mount Emei</span> – Wander through ancient
+                forests and discover breathtaking landscapes, soaking in the spiritual aura of this UNESCO World
+                Heritage site.</li>
+              <li><span class="bold-text">1:00 PM – Lunch Break</span></li>
+              <li><span class="bold-text">2:00 PM – 4:00 PM – Visit Huanglongxi Ancient Town</span> – Stroll along
+                tranquil rivers, cross stone bridges, and admire traditional Sichuanese architecture, stepping back into
+                a historic waterside settlement.</li>
+              <li><span class="bold-text">5:00 PM – Return to Hotel</span> – Conclude your day with a comfortable ride
+                back to your hotel, carrying memories of nature, culture, and heritage.</li>
+            </ul>
           </div>
         </el-tab-pane>
         <el-tab-pane label="Cost" name="fourth">
@@ -314,14 +401,14 @@
 
             </ul>
           </div>
-           <div v-if="tourInfo.id === 3">
+          <div v-if="tourInfo.id === 3">
             <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
             <ul>
               <li>Professional English-speaking guide </li>
               <li>Private car transfer with pick-up and drop-off from your hotel or chosen location</li>
               <li>Authentic Shanghai-style lunch</li>
               <li>Boat ride</li>
-              
+
             </ul>
             <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
             <ul>
@@ -329,10 +416,40 @@
               <li>Gratuities for guide and driver</li>
 
             </ul>
-           </div>
+          </div>
+          <div v-if="tourInfo.id === 4">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Transportation to and from the attractions</li>
+              <li>Services of an experienced tour guide</li>
+              <li>Applicable taxes</li>
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals and drinks</li>
+              <li>Optional activities or programs</li>
+              <li>Personal expenses such as shopping</li>
+              <li>Tips and gratuities</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 5">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Private transportation</li>
+              <li>Professional tour guide throughout the trip</li>
+              <li>Tax</li>
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals and beverages</li>
+              <li>Optional activities or programs</li>
+              <li>Personal expenses, including shopping</li>
+              <li>Gratuities and tips</li>
+            </ul>
+          </div>
         </el-tab-pane>
-        
-   
+
+
       </el-tabs>
     </div>
   </div>
@@ -369,6 +486,33 @@ import img21 from '@/assets/sh-3-5.jpg';
 import img22 from '@/assets/sh-3-6.jpg';
 import img23 from '@/assets/sh-3-7.jpg';
 import img24 from '@/assets/sh-3-8.jpg';
+//
+import cdimg1 from '@/assets/sichuan/1.jpg';
+import cdimg2 from '@/assets/sichuan/2.jpg';
+import cdimg3 from '@/assets/sichuan/3.jpg';
+import cdimg4 from '@/assets/sichuan/4.jpg';
+import cdimg6 from '@/assets/sichuan/6.jpg';
+import cdimg7 from '@/assets/sichuan/7.jpg';
+import cdimg8 from '@/assets/sichuan/8.jpg';
+import cdimg9 from '@/assets/sichuan/9.jpg';
+import cdimg10 from '@/assets/sichuan/10.jpg';
+import cdimg11 from '@/assets/sichuan/11.jpg';
+import cdimg12 from '@/assets/sichuan/12.jpg';
+//
+import em1 from '@/assets/sichuan/em1.jpg';
+import em2 from '@/assets/sichuan/em2.jpg';
+import em3 from '@/assets/sichuan/em3.jpg';
+import em5 from '@/assets/sichuan/em5.jpg';
+import em4 from '@/assets/sichuan/em4.jpg';
+import em6 from '@/assets/sichuan/em6.jpg';
+import em7 from '@/assets/sichuan/em7.jpg';
+import em8 from '@/assets/sichuan/em8.jpg';
+import em9 from '@/assets/sichuan/em9.jpg';
+import em10 from '@/assets/sichuan/em10.jpg';
+import em11 from '@/assets/sichuan/em11.jpg';
+import em12 from '@/assets/sichuan/em12.jpg';
+import em13 from '@/assets/sichuan/em13.jpg';
+// import em14 from '@/assets/sichuan/em14.PNG';
 export default {
   name: "Detail",
   components: {
@@ -445,6 +589,39 @@ export default {
         this.tourInfo.title = "Zhujiajiao Watertown: Historic Water Town & Canal Cruise";
         this.tourInfo.adultPrice = 169;
         this.tourInfo.childPrice = 129;
+      } else if (id === 4) {
+        this.images = [cdimg1,
+          cdimg2,
+          cdimg3,
+          cdimg4,
+          cdimg6,
+          cdimg7,
+          cdimg8,
+          cdimg9,
+          cdimg10,
+          cdimg11,
+          cdimg12];
+        this.tourInfo.title = "Mount Qingcheng & Panda Valley Day Tour";
+        this.tourInfo.adultPrice = 125;
+        this.tourInfo.childPrice = 125; // 如果儿童价格相同
+      } else if (id === 5) {
+        this.images = [em1,
+          em2,
+          em3,
+          em4,
+          em5,
+          em6,
+          em7,
+          em8,
+          em9,
+          em10,
+          em11,
+          em12,
+          em13,
+        ];
+        this.tourInfo.title = "Emei Mountain & Ancient Town of Huanglongxi";
+        this.tourInfo.adultPrice = 125;
+        this.tourInfo.childPrice = 125;
       }
 
       this.currentImage = this.images.length > 0 ? this.images[0] : '';
