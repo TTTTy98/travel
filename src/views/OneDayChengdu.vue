@@ -34,6 +34,10 @@ import Header from "@/components/Header.vue";
 import TourCd1 from '@/assets/TourCd1.jpg';
 import TourCd2 from '@/assets/TourCd2.jpg';
 import TourCd3 from '@/assets/TourCd3.jpg';
+import TourCd4 from '@/assets/TourCd4.jpg';
+// import TourCd5 from '@/assets/TourCd5.jpg';
+// import TourCd6 from '@/assets/TourCd6.jpg';
+// import TourCd7 from '@/assets/TourCd7.jpg';
 import TourCd8 from '@/assets/TourCd8.jpg';
 import TourCd9 from '@/assets/TourCd9.jpg';
 export default {
@@ -61,6 +65,12 @@ export default {
           title: "Chengdu to Tibetan Village: Experience a Day in Tibetan Life",
           adultPrice: 215,
           image: TourCd3
+        },
+        {
+          id: 4,
+          title: "Xiling Snow Mountain: Day Tour of Adventure and Beauty",
+          adultPrice: 215,
+          image: TourCd4
         },
         {
           id: 8,

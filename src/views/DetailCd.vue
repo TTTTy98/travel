@@ -120,6 +120,16 @@
               spirit, and unity that make Tibetan culture truly unforgettable.
             </div>
           </div>
+          <div v-if="tourInfo.id === 4">
+           <ul>
+            <li>Just a two-hour drive from Chengdu, Xiling Snow Mountain invites travelers into a winter wonderland of snowy peaks, whispering forests, and crisp alpine air. In a single day, you can leave the city behind and step into a landscape carved by glaciers, mist, and sunlight.</li>
+            <li>The journey begins with a scenic ride through the western hills, arriving at one of Sichuan’s most beloved snow destinations. A cable car ascends above the treetops, opening up views of endless snowfields and sweeping panoramas.</li>
+            <li>At Riyueping, the mountaintop stretches out like a frozen theater—Daxuetang Peak rises in the distance, sunlight sparkles on freshly fallen snow, and the only sound is the crunch of boots on powder. In winter, the area transforms into a living snow globe, offering breathtaking vistas across clouds and distant ridges.</li>
+            <li>Whether wandering through snow-covered pine forests or enjoying sleds and skis, Xiling Snow Mountain welcomes anyone seeking the magic of the mountains without a long journey. As the sun dips, the snow glows golden, the air turns crisp, and the mountains leave a lasting impression—proof that nature’s beauty doesn’t need days to be unforgettable.</li>
+            <li>Xiling Snow Mountain isn’t just a day trip; it’s a brief retreat into a world of snow, wonder, and alpine charm.</li>
+           </ul>
+
+          </div>
           <div v-if="tourInfo.id === 8">
             <div>Mount Qingcheng, often hailed as the birthplace of Taoism, stands as a living symbol of China's rich
               spiritual heritage. Rising to about 1,600 meters, the mountain offers a leisurely yet rewarding hike, with
@@ -185,6 +195,20 @@
               <li><span class="bold-text"> Butter Tea Workshop</span>– Try your hand at making this essential Tibetan beverage.</li>
               <li><span class="bold-text">Cultural Arts </span>– Optional sessions in Thangka painting, embroidery, and paper-cutting.</li>
               <li><span class="bold-text"> Dress & Celebrate </span>– Wear traditional Tibetan attire, enjoy a yak hotpot, join the Guozhuang dance, and share in the warmth of a bonfire gathering.</li>
+              
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 4">
+            <ul>
+              <li><span class="bold-text">Closest Alpine Escape from Chengdu</span>– Just two hours away, Xiling Snow Mountain offers one of Sichuan’s most accessible snow resorts, blending year-round alpine scenery with seasonal snowfields.</li>
+              <li><span class="bold-text">Riyueping (Sun & Moon Terrace) </span>–
+                 A sweeping viewpoint where misty mornings and glowing sunsets frame the distant Daxuetang Peak and its surrounding ridges.</li>
+              <li><span class="bold-text"> Daxuetang Peak</span>– Towering above 5,000 meters, this glacial giant dominates the skyline, creating a breathtaking snowy backdrop.</li>
+              <li><span class="bold-text">Yingxue Square </span>– Encircled by fir trees and easy pathways, it’s the perfect spot for gentle strolls, crisp mountain air, and memorable photos.</li>
+              <li><span class="bold-text">Snow & Ski Recreation Area </span>– From sledding and tubing to skiing and snowmobiling, this family-friendly zone guarantees winter fun for visitors of all ages.</li>
+              <li><span class="bold-text">Forest Trails in Winter </span>– Wander through quiet alpine woods draped in snow, with frozen streams and untouched powder amplifying the serene beauty.</li>
+              <li><span class="bold-text">Golden Sunset at Riyueping </span>– When conditions are right, the snowfields reflect a radiant golden glow as the sun sets over drifting clouds and faraway peaks.</li>
+              <li><span class="bold-text">Easy Day Trip Accessa </span>– A simple round-trip drive from Chengdu makes this one of the most convenient ways to enjoy snow without needing an overnight stay.</li>
               
             </ul>
           </div>
@@ -254,11 +278,22 @@
               </li>
               <li><span class="bold-text">12:00 PM </span> Enjoy an authentic Tibetan lunch, savoring traditional flavors made with local ingredients.</li>
               <li><span class="bold-text">02:00 PM – 04:00 PM</span>Participate in optional cultural activities, including Thangka painting, embroidery, or paper-cutting, to experience Tibetan artistry firsthand. </li>
-              <li><span class="bold-text">04:00 PM – 05:00 PM</span> Dress in traditional Tibetan attire for a memorable photo session capturing the essence of local culture.
+              <li><span class="bold-text">04:00 PM – 05:00 PM</span>  Dress in traditional Tibetan attire for a memorable photo session capturing the essence of local culture.
               </li>
               <li><span class="bold-text"> 05:00 PM – 07:00 PM</span> Enjoy a yak hotpot dinner and join a Guozhuang dance around a lively bonfire, celebrating Tibetan hospitality and community spirit.</li>
               <li><span class="bold-text"> 09:30 PM</span> Return to your hotel, concluding a full day of unforgettable Tibetan experiences.</li>
 
+
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 4">
+            <ul>
+              <li><span class="bold-text"> Morning </span> Drive to Xiling Snow Mountain.</li>
+
+              <li><span class="bold-text">Daytime </span> Explore Xiling: snow play, scenic views, and activities.
+              </li>
+              <li><span class="bold-text">Evening </span> Return to Chengdu.</li>
+              
 
             </ul>
           </div>
@@ -339,6 +374,25 @@
               <li>Optional activities or workshops beyond the main itinerary</li>
               <li>Personal expenses, such as shopping or souvenirs</li>
               <li>Tips for guides or staff</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 4">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Private vehicle transfers for the entire trip </li>
+              <li>Bilingual driver-guide service (English-speaking)</li>
+              <li>All applicable taxes</li>
+            
+
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals and beverages</li>
+              <li>Admission tickets to scenic attractions</li>
+              <li>Cable car and shuttle bus fares inside the scenic area</li>
+              <li>International airfare and visa fees</li>
+              <li>Personal expenses (shopping, extra activities, etc.)</li>
+              <li>Tips for driver/guide</li>
             </ul>
           </div>
           <div v-if="tourInfo.id === 8">
@@ -443,7 +497,16 @@ import img21 from '@/assets/cd/cd3-5.jpg';
 import img22 from '@/assets/cd/cd3-6.jpg';
 import img23 from '@/assets/cd/cd3-7.jpg';
 import img24 from '@/assets/cd/cd3-8.jpg';
-//
+// Tour 4 images
+import img4_1 from '@/assets/cd/cd4-1.jpg';
+import img4_2 from '@/assets/cd/cd4-2.jpg';
+import img4_3 from '@/assets/cd/cd4-3.jpg';
+import img4_4 from '@/assets/cd/cd4-4.jpg';
+import img4_5 from '@/assets/cd/cd4-5.jpg';
+import img4_6 from '@/assets/cd/cd4-6.jpg';
+import img4_7 from '@/assets/cd/cd4-7.jpg';
+import img4_8 from '@/assets/cd/cd4-8.jpg';
+// Tour8 images
 import cdimg1 from '@/assets/sichuan/1.jpg';
 import cdimg2 from '@/assets/sichuan/2.jpg';
 import cdimg3 from '@/assets/sichuan/3.jpg';
@@ -452,7 +515,7 @@ import cdimg6 from '@/assets/sichuan/6.jpg';
 import cdimg7 from '@/assets/sichuan/7.jpg';
 import cdimg8 from '@/assets/sichuan/8.jpg';
 
-
+// Tour9 images
 import em1 from '@/assets/sichuan/em1.jpg';
 import em2 from '@/assets/sichuan/em2.jpg';
 import em3 from '@/assets/sichuan/em3.jpg';
@@ -536,8 +599,13 @@ export default {
       } else if (id === 3) {
         this.images = [img17, img18, img19, img20, img21, img22, img23, img24];
         this.tourInfo.title = "Zhujiajiao Watertown: Historic Water Town & Canal Cruise";
-        this.tourInfo.adultPrice = 169;
-        this.tourInfo.childPrice = 129;
+        this.tourInfo.adultPrice = 215;
+      
+      }else if (id === 4) {
+        this.images = [img4_1, img4_2, img4_3, img4_4, img4_5, img4_6, img4_7, img4_8];
+        this.tourInfo.title = "Xiling Snow Mountain: Day Tour of Adventure and Beauty ";
+        this.tourInfo.adultPrice = 109;
+
       } else if (id === 8) {
         this.images = [cdimg1,
           cdimg2,
