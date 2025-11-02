@@ -35,7 +35,7 @@ import TourCd1 from '@/assets/TourCd1.jpg';
 import TourCd2 from '@/assets/TourCd2.jpg';
 import TourCd3 from '@/assets/TourCd3.jpg';
 import TourCd4 from '@/assets/TourCd4.jpg';
-// import TourCd5 from '@/assets/TourCd5.jpg';
+import TourCd5 from '@/assets/TourCd5.jpg';
 // import TourCd6 from '@/assets/TourCd6.jpg';
 // import TourCd7 from '@/assets/TourCd7.jpg';
 import TourCd8 from '@/assets/TourCd8.jpg';
@@ -72,6 +72,13 @@ export default {
           adultPrice: 215,
           image: TourCd4
         },
+         {
+          id: 5,
+          title: "Leshan Giant Buddha & Pandas: A Day of Wonder",
+          adultPrice: 165,
+          image: TourCd5
+        },
+        
         {
           id: 8,
           title: "Mount Qingcheng & Panda Valley Day Tour",

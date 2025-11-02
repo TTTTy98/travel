@@ -130,6 +130,14 @@
            </ul>
 
           </div>
+          <div v-if="tourInfo.id === 5">
+           <ul>
+            <li>Explore Sichuan: Pandas, Culture & Heritage</li>
+            <li>Embark on a full-day adventure through the natural and cultural wonders of Sichuan. Begin with a close encounter with giant pandas, watching them play, munch bamboo, and roam freely in habitats designed to mimic their natural home. Then, travel to the UNESCO World Heritage Site of Leshan to marvel at the world’s largest stone Buddha, standing 71 meters tall and overlooking the rivers for over 1,200 years—a true symbol of peace and spiritual wisdom.</li>
+            <li>This journey blends wildlife encounters with cultural exploration, offering an unforgettable experience of China’s breathtaking landscapes and rich heritage that will stay with you long after the day ends.</li>
+           </ul>
+
+          </div>
           <div v-if="tourInfo.id === 8">
             <div>Mount Qingcheng, often hailed as the birthplace of Taoism, stands as a living symbol of China's rich
               spiritual heritage. Rising to about 1,600 meters, the mountain offers a leisurely yet rewarding hike, with
@@ -209,6 +217,16 @@
               <li><span class="bold-text">Forest Trails in Winter </span>– Wander through quiet alpine woods draped in snow, with frozen streams and untouched powder amplifying the serene beauty.</li>
               <li><span class="bold-text">Golden Sunset at Riyueping </span>– When conditions are right, the snowfields reflect a radiant golden glow as the sun sets over drifting clouds and faraway peaks.</li>
               <li><span class="bold-text">Easy Day Trip Accessa </span>– A simple round-trip drive from Chengdu makes this one of the most convenient ways to enjoy snow without needing an overnight stay.</li>
+              
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 5">
+            <ul>
+              <li><span class="bold-text">Ultimate Exploration</span>–Make the most of your day by visiting Sichuan’s top two attractions in one journey.</li>
+              <li><span class="bold-text">Panda Encounters </span>–
+                Get up close with playful pandas and learn about efforts to protect these beloved animals.</li>
+              <li><span class="bold-text"> Historic Marvel</span>– Stand in awe of the Leshan Giant Buddha and explore its rich cultural and spiritual legacy.</li>
+              <li><span class="bold-text">Perfectly Paced</span>– A well-structured itinerary that blends natural wonders with cultural heritage in a single day.</li>
               
             </ul>
           </div>
@@ -296,6 +314,26 @@
               
 
             </ul>
+          </div>
+          <div v-if="tourInfo.id === 5">
+            <ul>
+              <li><span class="bold-text"> 7:50 AM </span>Pick up from hotel and start your adventure.</li>
+
+              <li><span class="bold-text">8:30 AM – 10:50 AM </span> Explore the Chengdu Research Base of Giant Panda Breeding, getting up close with playful pandas.
+              </li>
+              <li><span class="bold-text">10:50 AM – 12:50 PM </span> Scenic drive to Leshan with a stop for lunch along the way.</li>
+              <li><span class="bold-text"> 1:50 PM – 3:50 PM </span>Marvel at the Leshan Giant Buddha, the world’s largest stone-carved Buddha.</li>
+              <li><span class="bold-text"> 6:00 PM </span>Return to your hotel, concluding a day filled with wildlife and cultural wonders.</li>
+
+
+
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 6">
+            
+          </div>
+          <div v-if="tourInfo.id === 7">
+            
           </div>
           <div v-if="tourInfo.id === 8">
             <ul>
@@ -393,6 +431,24 @@
               <li>International airfare and visa fees</li>
               <li>Personal expenses (shopping, extra activities, etc.)</li>
               <li>Tips for driver/guide</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 5">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Round-trip transportation </li>
+              <li>Entrance tickets to attractions</li>
+              <li>Professional tour guide</li>
+              <li>Service fees</li>
+              <li>Applicable taxes</li>
+
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals and drinks</li>
+              <li>Optional activities or programs</li>
+              <li>Personal expenses (e.g., shopping, souvenirs)</li>
+              <li>Gratuities/tips</li>
             </ul>
           </div>
           <div v-if="tourInfo.id === 8">
@@ -506,6 +562,15 @@ import img4_5 from '@/assets/cd/cd4-5.jpg';
 import img4_6 from '@/assets/cd/cd4-6.jpg';
 import img4_7 from '@/assets/cd/cd4-7.jpg';
 import img4_8 from '@/assets/cd/cd4-8.jpg';
+// Tour 5images
+import img5_1 from '@/assets/cd/cd5-1.jpg';
+import img5_2 from '@/assets/cd/cd5-2.jpg';
+import img5_3 from '@/assets/cd/cd5-3.jpg';
+import img5_4 from '@/assets/cd/cd5-4.jpg';
+import img5_5 from '@/assets/cd/cd5-5.jpg';
+import img5_6 from '@/assets/cd/cd5-6.jpg';
+import img5_7 from '@/assets/cd/cd5-7.jpg';
+import img5_8 from '@/assets/cd/cd5-8.jpg';
 // Tour8 images
 import cdimg1 from '@/assets/sichuan/1.jpg';
 import cdimg2 from '@/assets/sichuan/2.jpg';
@@ -606,7 +671,12 @@ export default {
         this.tourInfo.title = "Xiling Snow Mountain: Day Tour of Adventure and Beauty ";
         this.tourInfo.adultPrice = 109;
 
-      } else if (id === 8) {
+      } else if (id === 5) {
+        this.images = [img5_1, img5_2, img5_3, img5_4, img5_5, img5_6, img5_7, img5_8];
+        this.tourInfo.title = "Leshan Giant Buddha & Pandas: A Day of Wonder";
+        this.tourInfo.adultPrice = 165;
+
+      }else if (id === 8) {
         this.images = [cdimg1,
           cdimg2,
           cdimg3,
