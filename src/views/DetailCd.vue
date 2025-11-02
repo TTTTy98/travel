@@ -525,8 +525,8 @@
 <script>
 import Header from "@/components/Header.vue";
 // Tour 1 images
-import img1 from '@/assets/cd/cd1-1.JPG';
-import img2 from '@/assets/cd/cd1-2.JPG';
+import img1 from '@/assets/cd/cd1-1.jpg';
+import img2 from '@/assets/cd/cd1-2.jpg';
 import img3 from '@/assets/cd/cd1-3.jpg';
 import img4 from '@/assets/cd/cd1-4.jpg';
 import img5 from '@/assets/cd/cd1-5.jpg';
@@ -539,7 +539,7 @@ import img9 from '@/assets/cd/cd2-1.jpg';
 import img10 from '@/assets/cd/cd2-2.jpg';
 import img11 from '@/assets/cd/cd2-3.jpg';
 import img12 from '@/assets/cd/cd2-4.jpg';
-import img13 from '@/assets/cd/cd2-5.JPG';
+import img13 from '@/assets/cd/cd2-5.jpg';
 import img14 from '@/assets/cd/cd2-6.jpg';
 import img15 from '@/assets/cd/cd2-7.jpg';
 import img16 from '@/assets/cd/cd2-8.jpg';
@@ -568,7 +568,7 @@ import img5_2 from '@/assets/cd/cd5-2.jpg';
 import img5_3 from '@/assets/cd/cd5-3.jpg';
 import img5_4 from '@/assets/cd/cd5-4.jpg';
 import img5_5 from '@/assets/cd/cd5-5.jpg';
-import img5_6 from '@/assets/cd/cd5-6.JPG';
+import img5_6 from '@/assets/cd/cd5-6.jpg';
 import img5_7 from '@/assets/cd/cd5-7.jpg';
 import img5_8 from '@/assets/cd/cd5-8.jpg';
 // Tour8 images
