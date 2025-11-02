@@ -28,12 +28,12 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import Tour1 from '@/assets/Tour1.jpg'
-import Tour2 from '@/assets/Tour2.jpg'
-import Tour3 from '@/assets/Tour3.jpg'
-import Tour4 from '@/assets/Tour4.jpg'
-import Tour5 from '@/assets/Tour5.jpg'
-import Tour6 from '@/assets/Tour6.jpg'
+// import Tour1 from '@/assets/Tour1.jpg'
+// import Tour2 from '@/assets/Tour2.jpg'
+// import Tour3 from '@/assets/Tour3.jpg'
+// import Tour4 from '@/assets/Tour4.jpg'
+// import Tour5 from '@/assets/Tour5.jpg'
+// import Tour6 from '@/assets/Tour6.jpg'
 
 export default {
   name: "About",
@@ -43,54 +43,54 @@ export default {
   data() {
     return {
       items: [
-        {
-          id: 1,
-          title: "A Taste of Authentic Hutong Food",
-          city: "Beijing",
-          price: 75.0,
-          rating: 5,
-          image: Tour1
-        },
-        {
-          id: 2,
-          title: "Glimpse Into Imperial Splendor",
-          city: "Beijing",
-          price: 191.36,
-          rating: 5,
-          image:Tour2
-        },
-        {
-          id: 3,
-          title: "Cantonese Cooking and Tasting",
-          city: "Guangzhou",
-          price: 265.65,
-          rating: 5,
-          image: Tour3
-        },
-        {
-          id: 4,
-          title: "Terracotta Army Adventure",
-          city: "Xi'an",
-          price: 59.0,
-          rating: 5,
-          image: Tour4
-        },
-        {
-          id: 5,
-          title: "Terracotta Army Adventure",
-          city: "Xi'an",
-          price: 59.0,
-          rating: 5,
-          image: Tour5
-        },
-        {
-          id: 6,
-          title: "Terracotta Army Adventure",
-          city: "Xi'an",
-          price: 59.0,
-          rating: 5,
-          image: Tour6
-        },
+        // {
+        //   id: 1,
+        //   title: "A Taste of Authentic Hutong Food",
+        //   city: "Beijing",
+        //   price: 75.0,
+        //   rating: 5,
+        //   image: Tour1
+        // },
+        // {
+        //   id: 2,
+        //   title: "Glimpse Into Imperial Splendor",
+        //   city: "Beijing",
+        //   price: 191.36,
+        //   rating: 5,
+        //   image:Tour2
+        // },
+        // {
+        //   id: 3,
+        //   title: "Cantonese Cooking and Tasting",
+        //   city: "Guangzhou",
+        //   price: 265.65,
+        //   rating: 5,
+        //   image: Tour3
+        // },
+        // {
+        //   id: 4,
+        //   title: "Terracotta Army Adventure",
+        //   city: "Xi'an",
+        //   price: 59.0,
+        //   rating: 5,
+        //   image: Tour4
+        // },
+        // {
+        //   id: 5,
+        //   title: "Terracotta Army Adventure",
+        //   city: "Xi'an",
+        //   price: 59.0,
+        //   rating: 5,
+        //   image: Tour5
+        // },
+        // {
+        //   id: 6,
+        //   title: "Terracotta Army Adventure",
+        //   city: "Xi'an",
+        //   price: 59.0,
+        //   rating: 5,
+        //   image: Tour6
+        // },
         // 更多项...
       ]
     };
