@@ -31,8 +31,8 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import TourCd1 from '@/assets/TourCd1.jpg';
-import TourCd2 from '@/assets/TourCd2.jpg';
+import TourCd1 from '@/assets/TourCd1.JPG';
+import TourCd2 from '@/assets/TourCd2.JPG';
 import TourCd3 from '@/assets/TourCd3.jpg';
 import TourCd4 from '@/assets/TourCd4.jpg';
 import TourCd5 from '@/assets/TourCd5.jpg';
