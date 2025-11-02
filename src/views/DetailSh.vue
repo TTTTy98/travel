@@ -529,7 +529,7 @@ import cdimg8 from '@/assets/sichuan/8.jpg';
 import cdimg9 from '@/assets/sichuan/9.jpg';
 import cdimg10 from '@/assets/sichuan/10.jpg';
 import cdimg11 from '@/assets/sichuan/11.jpg';
-import cdimg12 from '@/assets/sichuan/12.jpg';
+
 //
 import em1 from '@/assets/sichuan/em1.jpg';
 import em2 from '@/assets/sichuan/em2.jpg';
@@ -632,7 +632,7 @@ export default {
           cdimg9,
           cdimg10,
           cdimg11,
-          cdimg12];
+          ];
         this.tourInfo.title = "Mount Qingcheng & Panda Valley Day Tour";
         this.tourInfo.adultPrice = 125;
         this.tourInfo.childPrice = 125; // 如果儿童价格相同
