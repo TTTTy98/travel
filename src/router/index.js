@@ -42,9 +42,14 @@ export default new Router({
       component: () => import('@/views/Contact.vue') // 懒加载方式
     },
     {
-       path: '/Detail/:id',
-      name: 'Detail',
-      component: () => import('@/views/Detail.vue') // 懒加载方式
+       path: '/DetailSh/:id',
+      name: 'DetailSh',
+      component: () => import('@/views/DetailSh.vue') // 懒加载方式
+    },
+    {
+       path: '/DetailCd/:id',
+      name: 'DetailCd',
+      component: () => import('@/views/DetailCd.vue') // 懒加载方式
     },
     {
       path: '/OneDayShanghai',

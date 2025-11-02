@@ -57,7 +57,7 @@
     <div style="
         display: flex;
         background-color: white;
-        padding: 5% 20%;
+        padding: 0% 20%;
         justify-content: center;
       ">
       <el-tabs v-model="activeName" @tab-click="handleClick" style="width: 100%">
@@ -448,7 +448,39 @@
             </ul>
           </div>
         </el-tab-pane>
+<el-tab-pane label="Important info" name="five">
+        <p style="margin-top: 2%;"><span style="font-weight: bold;">Cancellation Policy</span></p>
+        1.Full Refund: Cancel at least 24 hours before the tour to receive a 100% refund.
+        <ul>
+          <li>Note: If you paid via PayPal or a PayPal-authorized credit card, a 4.4% transaction fee will be deducted
+            and is non-refundable, as we cannot recover it from PayPal. </li>
+          <li>Example: If you paid $100 via PayPal and cancel more than 24 hours in advance, you will receive $95.60
+            back, with $4.40 deducted for the fee.</li>
 
+        </ul>
+        2.No Refund: Cancellations less than 24 hours before the tour or no-shows will not be refunded.
+        <p style="margin-top: 2%;"><span style="font-weight: bold;">What if it rains or the weather is bad?</span></p>
+        <div>1.Tours run rain or shine, so bringing an umbrella is recommended if needed.</div>
+        <div>2.In case of extreme weather (e.g., hurricanes, heavy storms, or extreme heat), the tour will be canceled
+          at least one day in advance and a full refund will be issued.</div>
+        <p style="margin-top: 2%;"><span style="font-weight: bold;">Dietary Information</span></p>
+        <ul>
+          <li>
+            <p>1.Advance Notice</p>For tours that include meals, please inform us of any dietary requirements (e.g.,
+            food allergies, vegetarian preferences) at the time of booking, so we can make the necessary arrangements.
+          </li>
+          <li>
+            <p>2.Allergies</p>While we will do our best to accommodate common food allergies, we cannot guarantee a
+            completely allergen-free environment. Cross-contamination (e.g., with nuts, gluten, or seafood) may occur in
+            local kitchens.
+          </li>
+          <li>
+            <p>3.Vegetarian Options</p>Vegetarian meals may be available upon request. However, please note that in some
+            destinations, vegetarian options are limited as many traditional dishes feature meat or animal-based
+            seasonings.
+          </li>
+        </ul>
+        </el-tab-pane>
 
       </el-tabs>
     </div>

@@ -6,7 +6,7 @@
       <div class="card-grid">
         <el-row :gutter="20">
           <el-col :span="6" v-for="item in items" :key="item.id">
-            <router-link :to="`/Detail/${item.id}`" style="text-decoration: none; color: inherit;">
+            <router-link :to="`/DetailSh/${item.id}`" style="text-decoration: none; color: inherit;">
               <el-card :body-style="{ padding: '0px' }" shadow="hover" style="margin-top: 30px;">
                 <img :src="item.image" class="card-image" />
                 <div class="card-content">
