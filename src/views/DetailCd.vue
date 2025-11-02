@@ -138,6 +138,18 @@
            </ul>
 
           </div>
+          <div v-if="tourInfo.id === 6">
+           <ul>
+            <li>Discover Sichuan: Pandas, Tea & Scenic Wonders</li>
+            <li>Embark on a full-day adventure through Sichuan’s ecological and cultural treasures. Begin at Bifengxia, a lush sanctuary for endangered giant pandas. Watch these adorable creatures up close in their natural habitat, surrounded by dense forests, cascading waterfalls, and vibrant biodiversity. Along the way, learn about global conservation efforts and deepen your appreciation for nature’s delicate balance.</li>
+            <li>Next, head to Mengding Mountain, the cradle of China’s tea culture. Wander through ancient tea terraces that stretch across the hills, offering stunning panoramic views. Try your hand at traditional tea picking and discover the art of tea crafting, connecting with centuries of cultural heritage. The serene landscapes and fragrant tea fields create the perfect setting to relax, rejuvenate, and immerse yourself in local traditions.</li>
+            <li>This immersive tour blends wildlife encounters, breathtaking scenery, and cultural experiences, promising an unforgettable journey into the heart of Sichuan’s natural and historical wonders.</li>
+           </ul>
+
+          </div>
+          <div v-if="tourInfo.id === 7">
+           
+          </div>
           <div v-if="tourInfo.id === 8">
             <div>Mount Qingcheng, often hailed as the birthplace of Taoism, stands as a living symbol of China's rich
               spiritual heritage. Rising to about 1,600 meters, the mountain offers a leisurely yet rewarding hike, with
@@ -228,6 +240,27 @@
               <li><span class="bold-text"> Historic Marvel</span>– Stand in awe of the Leshan Giant Buddha and explore its rich cultural and spiritual legacy.</li>
               <li><span class="bold-text">Perfectly Paced</span>– A well-structured itinerary that blends natural wonders with cultural heritage in a single day.</li>
               
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 6">
+            <ul>
+              <li><span class="bold-text">Ultimate Exploration</span>–Make the most of your day by visiting Sichuan’s top two attractions in one journey.</li>
+              <li><span class="bold-text">Panda Encounters </span>–
+                Get up close with playful pandas and learn about efforts to protect these beloved animals.</li>
+              <li><span class="bold-text"> Historic Marvel</span>– Stand in awe of the Leshan Giant Buddha and explore its rich cultural and spiritual legacy.</li>
+              <li><span class="bold-text">Perfectly Paced</span>– A well-structured itinerary that blends natural wonders with cultural heritage in a single day.</li>
+              
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 7">
+            <ul>
+              <li><span class="bold-text">Pristine Panda Habitat</span>–Discover giant pandas at the untouched Bifengxia Canyon, a sanctuary for these rare creatures.</li>
+              <li><span class="bold-text">Lush Natural Beauty </span>–
+               Explore Bifengxia’s verdant forests and cascading waterfalls, teeming with biodiversity.</li>
+              <li><span class="bold-text"> Tea Picking Tradition</span>– Experience the age-old practice of hand-picking tea leaves on Mengding Mountain.</li>
+              <li><span class="bold-text">Scenic Tea Terraces</span>– Stroll through Mengding Mountain’s historic tea terraces, offering breathtaking panoramic views.</li>
+              <li><span class="bold-text">Tea Crafting Insights</span>– Learn the traditional methods of tea processing amidst the tranquil tea fields.</li>
+
             </ul>
           </div>
           <div v-if="tourInfo.id === 8">
@@ -324,13 +357,21 @@
               <li><span class="bold-text">10:50 AM – 12:50 PM </span> Scenic drive to Leshan with a stop for lunch along the way.</li>
               <li><span class="bold-text"> 1:50 PM – 3:50 PM </span>Marvel at the Leshan Giant Buddha, the world’s largest stone-carved Buddha.</li>
               <li><span class="bold-text"> 6:00 PM </span>Return to your hotel, concluding a day filled with wildlife and cultural wonders.</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 6">
+            <ul>
+              <li><span class="bold-text"> 7:00 AM </span>Hotel pick-up.</li>
+
+              <li><span class="bold-text">9:40 AM – 12:40 PM  </span> Explore Bifengxia Panda Base, observing giant pandas in their natural habitat.
+              </li>
+              <li><span class="bold-text">1:40 PM  </span>Lunch break.</li>
+              <li><span class="bold-text"> 2:40 PM – 4:40 PM </span>Hands-on tea experience: pick fresh tea leaves and learn traditional tea-making techniques on Mengding Mountain.</li>
+              <li><span class="bold-text"> 6:40 PM</span>Return to hotel.</li>
 
 
 
             </ul>
-          </div>
-          <div v-if="tourInfo.id === 6">
-            
           </div>
           <div v-if="tourInfo.id === 7">
             
@@ -441,6 +482,37 @@
               <li>Professional tour guide</li>
               <li>Service fees</li>
               <li>Applicable taxes</li>
+
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals and drinks</li>
+              <li>Optional activities or programs</li>
+              <li>Personal expenses (e.g., shopping, souvenirs)</li>
+              <li>Gratuities/tips</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 6">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Transfers and transportation </li>
+              <li>Professional tour guide</li>
+              <li>Service charges</li>
+              <li>Applicable taxes</li>
+              
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals and drinks</li>
+              <li>Optional excursions or activities</li>
+              <li>Personal expenses (such as souvenirs or shopping)</li>
+              <li>Gratuities/tips</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 7">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              
 
             </ul>
             <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
@@ -571,6 +643,15 @@ import img5_5 from '@/assets/cd/cd5-5.jpg';
 import img5_6 from '@/assets/cd/cd5-6.jpg';
 import img5_7 from '@/assets/cd/cd5-7.jpg';
 import img5_8 from '@/assets/cd/cd5-8.jpg';
+// Tour 6 images
+import img6_1 from '@/assets/cd/cd6-1.png';
+import img6_2 from '@/assets/cd/cd6-2.jpg';
+import img6_3 from '@/assets/cd/cd6-3.jpg';
+import img6_4 from '@/assets/cd/cd6-4.jpg';
+import img6_5 from '@/assets/cd/cd6-5.jpg';
+import img6_6 from '@/assets/cd/cd6-6.jpg';
+import img6_7 from '@/assets/cd/cd6-7.jpg';
+import img6_8 from '@/assets/cd/cd6-8.jpg';
 // Tour8 images
 import cdimg1 from '@/assets/sichuan/1.jpg';
 import cdimg2 from '@/assets/sichuan/2.jpg';
@@ -675,6 +756,11 @@ export default {
         this.images = [img5_1, img5_2, img5_3, img5_4, img5_5, img5_6, img5_7, img5_8];
         this.tourInfo.title = "Leshan Giant Buddha & Pandas: A Day of Wonder";
         this.tourInfo.adultPrice = 165;
+
+      }else if (id === 6) {
+        this.images = [img6_1, img6_2, img6_3, img6_4, img6_5, img6_6, img6_7, img6_8];
+        this.tourInfo.title = "Tea Picking & Panda Encounters in the Unspoiled";
+        this.tourInfo.adultPrice = 155;
 
       }else if (id === 8) {
         this.images = [cdimg1,

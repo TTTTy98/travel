@@ -36,7 +36,7 @@ import TourCd2 from '@/assets/TourCd2.jpg';
 import TourCd3 from '@/assets/TourCd3.jpg';
 import TourCd4 from '@/assets/TourCd4.jpg';
 import TourCd5 from '@/assets/TourCd5.jpg';
-// import TourCd6 from '@/assets/TourCd6.jpg';
+import TourCd6 from '@/assets/TourCd6.jpg';
 // import TourCd7 from '@/assets/TourCd7.jpg';
 import TourCd8 from '@/assets/TourCd8.jpg';
 import TourCd9 from '@/assets/TourCd9.jpg';
@@ -78,7 +78,12 @@ export default {
           adultPrice: 165,
           image: TourCd5
         },
-        
+        {
+          id: 6,
+          title: "Tea Picking & Panda Encounters in the Unspoiled",
+          adultPrice: 155,
+          image: TourCd6
+        },
         {
           id: 8,
           title: "Mount Qingcheng & Panda Valley Day Tour",
