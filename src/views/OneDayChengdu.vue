@@ -37,9 +37,13 @@ import TourCd3 from '@/assets/TourCd3.jpg';
 import TourCd4 from '@/assets/TourCd4.jpg';
 import TourCd5 from '@/assets/TourCd5.jpg';
 import TourCd6 from '@/assets/TourCd6.jpg';
-// import TourCd7 from '@/assets/TourCd7.jpg';
+import TourCd7 from '@/assets/TourCd7.jpg';
 import TourCd8 from '@/assets/TourCd8.jpg';
 import TourCd9 from '@/assets/TourCd9.jpg';
+import TourCd10 from '@/assets/TourCd10.jpg';
+import TourCd11 from '@/assets/TourCd11.jpg';
+import TourCd12 from '@/assets/TourCd12.jpg';
+import TourCd13 from '@/assets/TourCd13.jpg';
 export default {
   name: "About",
   components: {
@@ -85,6 +89,13 @@ export default {
           image: TourCd6
         },
         {
+          id: 7,
+          title: "Discover Wolong, Blue Tears & Zhongshu: Chengdu’s Secret Gems",
+          adultPrice: 145,
+          image: TourCd7
+        },
+        
+        {
           id: 8,
           title: "Mount Qingcheng & Panda Valley Day Tour",
           adultPrice: 125,
@@ -95,7 +106,32 @@ export default {
           title: "Emei Mountain & Ancient Town of Huanglongxi",
           adultPrice: 125,
           image: TourCd9
-        }
+        },
+        
+        {
+          id: 10,
+          title: "Discover the Snowy Magic of Bipenggou in One Day",
+          adultPrice: 125,
+          image: TourCd10
+        },
+        {
+          id: 11,
+          title: "Chengdu: A Journey Through Culture & Tradition",
+          adultPrice: 295,
+          image: TourCd11
+        },
+        {
+          id: 12,
+          title: "Zen Escape: A Journey into Mindful Serenity",
+          adultPrice: 155,
+          image: TourCd12
+        },
+        {
+          id: 13,
+          title: "Discover Siguniang Mountain: One-Day Adventure",
+          adultPrice: 109,
+          image: TourCd13
+        },
       ]
     };
   },
@@ -123,8 +159,18 @@ export default {
   transform: scale(1.1);
 }
 
+.el-card {
+  height: 550px; /* 根据内容调整，确保能容纳最长标题 */
+  display: flex;
+  flex-direction: column;
+}
+
 .card-content {
   padding: 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {

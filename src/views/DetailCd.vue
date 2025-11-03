@@ -148,7 +148,13 @@
 
           </div>
           <div v-if="tourInfo.id === 7">
-           
+            <ul>
+            <li>Experience the best of Chengdu in one captivating day, blending wildlife, culture, and history. Start at Wolong Panda Base, a world-renowned sanctuary where giant pandas roam in semi-natural habitats. Join a morning feeding session for a close-up encounter with these beloved creatures while gaining insight into pioneering conservation efforts.</li>
+            <li>Explore Yantianwo, home to the world’s largest panda sculpture, an artistic marvel perfect for photos and a playful glimpse into Chengdu’s creative spirit.</li>
+            <li>Continue to Nanqiao, an ancient bridge steeped in history and famed for the enchanting “Blue Tears” phenomenon, when bioluminescent organisms illuminate the waters at night, creating a truly magical scene. This historic landmark has quietly witnessed centuries of Chengdu’s evolving culture.</li>
+            <li>Wrap up your journey at the Zhongshu Bookstore, celebrated as one of the “Top 10 Most Beautiful Bookstores in the World.” Its stunning architecture and serene atmosphere offer a peaceful retreat, merging tradition and modernity in a literary haven.</li>
+            <li>This carefully curated day trip offers a perfect balance of nature, art, and history, giving you a rich, unforgettable taste of Chengdu.</li>
+           </ul>
           </div>
           <div v-if="tourInfo.id === 8">
             <div>Mount Qingcheng, often hailed as the birthplace of Taoism, stands as a living symbol of China's rich
@@ -176,9 +182,45 @@
             <div>This day trip is a perfect blend of natural wonder, spiritual heritage, and timeless charm, offering an
               unforgettable experience for travelers seeking both adventure and serenity.</div>
           </div>
+          <div v-if="tourInfo.id === 10">
+            <ul>
+            <li>Escape the city and step into the untouched beauty of Bipenggou, a hidden gem in Sichuan’s Aba Tibetan and Qiang Autonomous Prefecture. Just a short drive transports you from urban life to soaring alpine peaks, where nature reveals a different masterpiece in every season.</li>
+            <li>In spring, wildflowers blanket the valleys; summer brings refreshing forests and cascading streams; autumn sets the mountains ablaze with golden hues; and winter transforms the landscape into a sparkling wonderland.</li>
+            <li>Beyond its breathtaking scenery, Bipenggou invites you to experience authentic Tibetan culture—wander through traditional villages, visit serene monasteries, and join lively festivals that celebrate the warmth and spirit of the Tibetan people.</li>
+            <li>This unforgettable day trip combines natural splendor with cultural discovery, offering a journey into the very heart of Sichuan.</li>
+            
+           </ul>
+          </div>
+          <div v-if="tourInfo.id === 11">
+            <ul>
+                <li>Discover Chengdu’s Cultural Heart</li>  
+                <li>Step into the vibrant soul of Chengdu, where ancient traditions meet modern energy. This day tour immerses you in the city’s rich cultural heritage with visits to Kuanzhai Alley and People's Park, two iconic landmarks that showcase Chengdu’s unique charm.</li>          
+                <li>Kuanzhai Alley, made up of three parallel lanes—Kuan Alley, Zhai Alley, and Jing Alley—offers a journey through time. Kuan Alley evokes the leisurely pace of historic Chengdu with its classic teahouses and taverns. Zhai Alley blends traditional courtyards with stylish bars and boutiques. Jing Alley brings modern Chengdu to life through lively nightlife and contemporary art displays.</li>
+                <li>At People’s Park, experience the city’s famous “slow life” philosophy. Stroll among lush greenery, sip tea in traditional teahouses, watch locals play mahjong, or try your hand at calligraphy. This park has long been the heart of Chengdu’s daily life, offering a genuine glimpse into local culture.</li>
+                <li>The day concludes with a culinary highlight at Shuyanfu Restaurant, where traditional Sichuan cuisine meets cultural performance. Savor authentic local dishes in a setting reminiscent of ancient royal banquets, creating a perfect harmony of taste and tradition.</li>
+                <li>This tour is a complete Chengdu experience, blending cultural discovery and gastronomic delight in a single unforgettable day.</li>
+                
+           </ul>
+          </div>
+          <div v-if="tourInfo.id === 12">
+            <ul>
+                <li>Spend a full day immersed in the spiritual beauty of Mount Emei, where nature and Zen traditions come together. Start your journey with a tour of ancient temples, wandering serene halls filled with centuries of wisdom and quiet reflection.</li>  
+                <li>Enjoy a wholesome vegetarian meal, embracing the monastic values of simplicity and gratitude, and savor every bite mindfully. Join guided meditation sessions led by experienced monks, exploring your inner calm and finding mental clarity amidst the tranquil surroundings.</li>
+                <li>Experience the meditative art of copying sacred scriptures, a hands-on practice that deepens your connection to Zen teachings. As the day concludes, participate in the incense-burning ritual, symbolically purifying the mind and uplifting the spirit.</li>
+                <li>This unique journey blends spiritual practice, cultural immersion, and natural beauty, offering a transformative experience that nurtures inner peace and a deeper appreciation for Zen traditions.</li>    
+           </ul>
+          </div>
+          <div v-if="tourInfo.id === 13">
+            <ul>
+               <li>Start your day early in Chengdu and head west into the soaring landscapes of the Qionglai Mountains. As the city slowly disappears behind you, the road winds through lush river valleys and forested hills, gradually climbing into the highlands where the colors and traditions of Tibetan culture begin to appear—prayer flags flutter in the wind, stone villages dot the slopes, and distant snow-capped peaks rise on the horizon.</li>
+               <li>Your journey leads to Mount Siguniang, often called the “Queen of Sichuan’s Peaks”, where four towering summits dominate alpine meadows and glacial valleys. Spend the day discovering Shuangqiao Valley, the park’s most scenic and accessible area. Hop on an eco-friendly shuttle and traverse dramatic mountain scenery, pausing to admire turquoise rivers, icy waterfalls, dense spruce forests, and jagged peaks mirrored in serene highland lakes.</li>
+               <li>Enjoy a simple local meal or packed picnic amid the breathtaking scenery, with the valley’s quiet and the crisp mountain air offering a refreshing break from the summer heat of the lowlands.</li>
+               <li>In the afternoon, begin the return journey to Chengdu, winding down through steep river canyons and picturesque Tibetan-style villages. By evening, you’ll be back in the city, carrying with you the memory of Sichuan’s hidden natural wonders—all experienced in just a single day.</li>
+           </ul>
+          </div>
         </el-tab-pane>
         <el-tab-pane label="Highlights" name="second">
-          <div v-if="tourInfo.id === 1"></div>
+          <div v-if="tourInfo.id === 1">
           <ul>
             <li><span class="bold-text">Panda Valley–</span> Discover China’s most beloved national treasure in one of
               the world’s leading panda conservation sites.</li>
@@ -192,6 +234,7 @@
             <li><span class="bold-text"> Nanqiao Bridge–</span> Walk across an ancient bridge that carries centuries of
               Chengdu’s cultural heritage.</li>
           </ul>
+          </div>
           <div v-if="tourInfo.id === 2">
             <ul>
               <li><span class="bold-text">Get Up Close with Pandas–</span> Step behind the scenes for an exclusive,
@@ -254,12 +297,11 @@
           </div>
           <div v-if="tourInfo.id === 7">
             <ul>
-              <li><span class="bold-text">Pristine Panda Habitat</span>–Discover giant pandas at the untouched Bifengxia Canyon, a sanctuary for these rare creatures.</li>
-              <li><span class="bold-text">Lush Natural Beauty </span>–
-               Explore Bifengxia’s verdant forests and cascading waterfalls, teeming with biodiversity.</li>
-              <li><span class="bold-text"> Tea Picking Tradition</span>– Experience the age-old practice of hand-picking tea leaves on Mengding Mountain.</li>
-              <li><span class="bold-text">Scenic Tea Terraces</span>– Stroll through Mengding Mountain’s historic tea terraces, offering breathtaking panoramic views.</li>
-              <li><span class="bold-text">Tea Crafting Insights</span>– Learn the traditional methods of tea processing amidst the tranquil tea fields.</li>
+              <li><span class="bold-text">Observe giant pandas up close</span>as they roam their semi-wild habitat at Wolong Panda Base.</li>
+              <li><span class="bold-text">Be mesmerized by the magical Blue Tears</span>at Yantianwo Bridge, a rare nighttime natural spectacle.</li>
+              <li><span class="bold-text"> Snap photos with the world’s largest panda sculpture</span>at Yantianwo, a true symbol of Chengdu’s playful charm.</li>
+              <li><span class="bold-text">Step back in time at Nanqiao Bridge</span>, a historic landmark that reflects centuries of Chengdu’s cultural heritage.</li>
+              <li><span class="bold-text">Wander through the stunning Zhongshu Bookstore</span>, an architectural gem and one of the world’s most beautiful bookstores.</li>
 
             </ul>
           </div>
@@ -284,6 +326,44 @@
               <li><span class="bold-text">Stroll Huanglongxi's Tranquil Waterways</span> – Meander along calm rivers
                 flanked by traditional Sichuanese architecture, and soak in the timeless charm of this ancient town.
               </li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 10">
+            <ul>
+              <li><span class="bold-text">Mountain Escape:</span>Leave the bustle of the city behind and ascend quickly into breathtaking alpine scenery.</li>
+              <li><span class="bold-text">Four Seasons of Beauty:</span>From spring blossoms to summer forests, autumn gold, and winter snow, nature transforms the valley year-round.</li>
+              <li><span class="bold-text"> Tibetan Heartbeat:</span>Step into authentic Tibetan villages, discover monasteries, and feel the rhythm of local traditions.</li>
+              <li><span class="bold-text">Nature & Adventure:</span>Wander through untouched landscapes,embrace winter fun in the snow.</li>
+
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 11">
+            <ul>
+              <li><span class="bold-text">Kuanzhai Alley:</span>Wander through historic lanes, visit traditional teahouses, and discover vibrant local shops.</li>
+              <li><span class="bold-text">People's Park:</span> Immerse yourself in authentic Chengdu life, sipping tea, playing mahjong, or practicing calligraphy alongside locals.</li>
+              <li><span class="bold-text"> Shuyanfu Dinner: </span>Savor a royal-style banquet featuring classic Sichuan cuisine.</li>
+              <li><span class="bold-text"> Cultural Performances: </span>Be captivated by dazzling face-changing shows and thrilling fire-breathing acts.</li>
+
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 12">
+            <ul>
+              <li><span class="bold-text">Temple Discovery:</span>Step into ancient sacred halls and feel the echoes of centuries of spiritual wisdom.</li>
+              <li><span class="bold-text">Mindful Feast: </span> Enjoy a vegetarian meal with full awareness, embracing the simplicity and gratitude of monastic life.</li>
+              <li><span class="bold-text">Meditation Guidance: </span>Journey inward with the support of experienced monks, finding clarity and calm beyond everyday distractions.</li>
+              <li><span class="bold-text">Sacred Script Practice:  </span>Engage in the meditative art of copying scriptures, deepening your connection to Zen teachings.</li>
+               <li><span class="bold-text">Incense Ritual: </span>Purify your mind and uplift your spirit through the timeless practice of incense burning.</li>
+
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 13">
+            <ul>
+              <li><span class="bold-text">Scenic Mountain Escape: </span>Just two hours from Chengdu, travel into the soaring landscapes of the Qionglai Mountains.</li>
+              <li><span class="bold-text">Majestic Peaks: </span> Admire Mount Siguniang, the “Queen of Sichuan’s Peaks,” with four towering summits above alpine meadows.</li>
+              <li><span class="bold-text">Shuangqiao Valley Wonders:  </span>Explore turquoise rivers, icy waterfalls, dense spruce forests, and jagged peaks reflected in serene lakes.</li>
+              <li><span class="bold-text">Day-Trip Convenience:  </span>Experience Sichuan’s hidden natural beauty—all in a single day from Chengdu.</li>
+
+
             </ul>
           </div>
         </el-tab-pane>
@@ -362,19 +442,22 @@
           <div v-if="tourInfo.id === 6">
             <ul>
               <li><span class="bold-text"> 7:00 AM </span>Hotel pick-up.</li>
-
-              <li><span class="bold-text">9:40 AM – 12:40 PM  </span> Explore Bifengxia Panda Base, observing giant pandas in their natural habitat.
+              <li><span class="bold-text">9:40 AM – 12:40 PM  </span> Explore Bifengxia Panda Base, observing giant pandas in their natural habitat.
               </li>
               <li><span class="bold-text">1:40 PM  </span>Lunch break.</li>
               <li><span class="bold-text"> 2:40 PM – 4:40 PM </span>Hands-on tea experience: pick fresh tea leaves and learn traditional tea-making techniques on Mengding Mountain.</li>
               <li><span class="bold-text"> 6:40 PM</span>Return to hotel.</li>
-
-
-
             </ul>
           </div>
           <div v-if="tourInfo.id === 7">
-            
+              <ul>
+              <li><span class="bold-text"> 7:00 AM </span>Hotel pick-up.</li>
+              <li><span class="bold-text">9:40 AM – 12:40 PM  </span> Explore Bifengxia Panda Base, observing pandas in their natural, semi-wild habitat.
+              </li>
+              <li><span class="bold-text">1:40 PM  </span>Lunch break.</li>
+              <li><span class="bold-text"> 2:40 PM – 4:40 PM </span>Participate in tea picking and traditional tea crafting at Mengding Mountain.</li>
+              <li><span class="bold-text"> 6:40 PM</span>Return to hotel.</li>
+            </ul>
           </div>
           <div v-if="tourInfo.id === 8">
             <ul>
@@ -403,6 +486,49 @@
               <li><span class="bold-text">5:00 PM – Return to Hotel</span> – Conclude your day with a comfortable ride
                 back to your hotel, carrying memories of nature, culture, and heritage.</li>
             </ul>
+          </div>
+          <div v-if="tourInfo.id === 10">
+            <ul>
+              <li><span class="bold-text">7:00 AM</span> –  Depart from your hotel and begin the scenic drive toward Bipenggou.</li>
+              <li><span class="bold-text">10:40 AM – 2:40 PM</span> – Explore the stunning landscapes of Bipenggou Valley. Walk along alpine trails, enjoy the panoramic views of snow-capped peaks.</li>
+              <li><span class="bold-text">2:40 PM</span>– Pause for lunch with refreshing mountain air and surrounding natural beauty.</li>
+              <li><span class="bold-text">3:10 PM – 6:10 PM</span> – Return drive to Chengdu, taking in the peaceful countryside along the way.</li>
+              <li><span class="bold-text">6:10 PM </span>– Arrive back at your hotel, concluding a full day of discovery.</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 11">
+            <ul>
+              <li><span class="bold-text">9:00 AM – Hotel Pick-Up:</span> Begin your cultural journey with a comfortable transfer from your hotel.</li>
+              <li><span class="bold-text">9:30 AM – 12:00 PM – Explore Kuanzhai Alley:</span> Wander through the historic lanes, sip tea in traditional teahouses, and browse vibrant shops blending old-world charm with modern flair.</li>
+              <li><span class="bold-text">12:30 PM – Lunch Break:</span>Enjoy a relaxed meal at your leisure.</li>
+              <li><span class="bold-text">1:30 PM – 4:30 PM – Discover People's Park:</span>Immerse yourself in local life—watch tea-drinking rituals, join a game of mahjong.</li>
+              <li><span class="bold-text">6:00 PM – Shuyanfu Dining Experience: </span>Savor a royal-style Sichuan banquet complemented by mesmerizing cultural performances</li>
+              <li><span class="bold-text">8:30 PM – Return to Hotel: </span>Conclude your day of cultural immersion and culinary delight with a comfortable transfer back.</li>
+
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 12">
+            <ul>
+              <li><span class="bold-text">7:30 AM </span>– Pick up from your hotel and begin your journey to Mount Emei.</li>
+              <li><span class="bold-text">9:30 AM</span> – Arrive at the majestic Mount Emei, ready for a day of Zen immersion.</li>
+              <li><span class="bold-text">10:00 AM – 4:30 PM</span>– Participate in Zen practices, including temple exploration, meditation, scripture copying, and mindful rituals.</li>
+              <li><span class="bold-text">6:30 PM</span>– Return to your hotel, concluding a day of spiritual reflection and inner calm.</li>
+              
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 13">
+            <div><span class="bold-text">Morning – Departure from Chengdu </span></div>
+            <div>Begin your day early, driving west along the Dujiangyan–Wenchuan Expressway. Pass through the towns of Yingxiu and Wolong, then cross the Balang Mountain Tunnel to gradually enter the Tibetan Plateau region. Upon reaching the Mount Siguniang Scenic Area, hop on an eco-shuttle to explore Shuangqiao Valley, the park’s most accessible and picturesque route. Enjoy a day surrounded by towering snow-capped peaks, lush forests, tranquil lakes, and alpine meadows.</div>
+            <div><span class="bold-text">Daytime – Exploring Siguniang Mountain</span></div>
+            <ul>
+              <li>The Four Sisters Peaks dominate the skyline, with Yaomei Peak reaching 6,250 meters. Often shrouded in clouds or snow, these majestic summits are nicknamed the “Alps of the East” and create one of Sichuan’s most iconic alpine vistas.</li>
+              <li>Shuangqiao Valley stretches over 35 kilometers, with its eco-shuttle route meandering along glacial rivers and alpine terrain—perfect for nature photography or leisurely strolls through conifer forests and valleys.</li>
+              <li>Niupengzi Meadow opens wide under distant peaks, where yaks graze quietly on the grasslands. Crisp blue skies and snowy mountains frame the scene, capturing the essence of Tibetan pastoral life.</li>
+              <li>Deeper into the valley, Mount Buda La rises sharply like a fortress, adding a dramatic, mysterious touch. Nearby, Sun & Moon Mirror Mountain gleams under sunlight, its cliff face reflecting the light like a natural mirror—an unforgettable, surreal sight.</li>
+              <li>Wander through the Red Spruce Forest, which transforms with the seasons—fiery red in autumn, snow-covered in winter—offering a serene escape. Along the route, alpine lakes such as Haizi Lake perfectly mirror the peaks and sky, creating one of the valley’s most tranquil and beautiful corners.</li>
+            </ul>
+            <div><span class="bold-text">Evening – Return to Chengdu </span></div>
+            <div>In the late afternoon, drive back to Chengdu, concluding a day immersed in snowy horizons, alpine forests, and highland serenity in western Sichuan.</div>
           </div>
         </el-tab-pane>
         <el-tab-pane label="Cost" name="fourth">
@@ -512,15 +638,19 @@
           <div v-if="tourInfo.id === 7">
             <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
             <ul>
-              
+              <li>Visit to Zhongshu Bookstore</li>
+              <li>Visit to Nanqiao (South) Bridge</li>
+              <li>Visit to Yantianwo Plaza</li>
+              <li>Professional guide service</li>
+              <li>Private car transfer between hotel and attractions</li>
 
             </ul>
             <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
             <ul>
-              <li>Meals and drinks</li>
+              <li>Meals</li>
               <li>Optional activities or programs</li>
-              <li>Personal expenses (e.g., shopping, souvenirs)</li>
-              <li>Gratuities/tips</li>
+              <li>Personal expenses such as shopping</li>
+              <li>tips</li>
             </ul>
           </div>
           <div v-if="tourInfo.id === 8">
@@ -551,6 +681,79 @@
               <li>Optional activities or programs</li>
               <li>Personal expenses, including shopping</li>
               <li>Gratuities and tips</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 10">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li>Private transportation throughout the trip</li>
+              <li>Professional English-speaking tour guide</li>
+              <li>Taxes</li>
+             
+
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals and beverages</li>
+              <li>Optional activities or programs</li>
+              <li>Personal expenses, including shopping</li>
+              <li>Tips</li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 11">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+              <li><span class="bold-text">Private Transportation:</span>Comfortable travel throughout the day.</li>
+              <li><span class="bold-text">Professional Tour Guide:</span>Knowledgeable guide to enrich your experience.</li>
+              <li><span class="bold-text">Taxes</span></li>
+             
+
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li><span class="bold-text">Meals: </span>Enjoy lunch and other personal dining choices on your own.</li>
+              <li><span class="bold-text">Optional Programs</span></li>
+              <li><span class="bold-text">Personal Expenses:</span>Shopping, souvenirs, and other personal costs.</li>
+              <li><span class="bold-text">Tips</span></li>
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 12">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+               <li>Meals during the tour.</li>
+              <li>Transportation between destinations</li>
+              <li>Professional tour guide services</li>
+              <li>Service fees</li>
+              <li>Applicable taxes</li>
+             
+
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Optional activities</li>
+              <li>Personal expenses, such as shopping</li>
+              <li>Gratuities / tips</li>
+       
+            </ul>
+          </div>
+          <div v-if="tourInfo.id === 13">
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <ul>
+               <li>Private car transfer for the entire trip</li>
+              <li>Professional English-speaking driver and guide service</li>
+              <li>All applicable taxes and service fees</li>
+              
+             
+
+            </ul>
+            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <ul>
+              <li>Meals not specified in the itinerary</li>
+              <li>Entrance tickets to scenic areas</li>
+              <li>Cable car and eco-shuttle bus tickets</li>
+              <li>International flights and visa fees</li>
+              <li>Personal expenses such as shopping or extra activities</li>
+              <li>Gratuities for the guide and driver</li>
             </ul>
           </div>
         </el-tab-pane>
@@ -652,6 +855,14 @@ import img6_5 from '@/assets/cd/cd6-5.jpg';
 import img6_6 from '@/assets/cd/cd6-6.jpg';
 import img6_7 from '@/assets/cd/cd6-7.jpg';
 import img6_8 from '@/assets/cd/cd6-8.jpg';
+// Tour 7 images
+import img7_1 from '@/assets/cd/cd7-1.jpg';
+import img7_2 from '@/assets/cd/cd7-2.jpg';
+import img7_3 from '@/assets/cd/cd7-3.jpg';
+import img7_4 from '@/assets/cd/cd7-4.jpg';
+import img7_5 from '@/assets/cd/cd7-5.jpg';
+import img7_6 from '@/assets/cd/cd7-6.jpg';
+
 // Tour8 images
 import cdimg1 from '@/assets/sichuan/1.jpg';
 import cdimg2 from '@/assets/sichuan/2.jpg';
@@ -670,6 +881,45 @@ import em4 from '@/assets/sichuan/em4.jpg';
 import em6 from '@/assets/sichuan/em6.jpg';
 import em7 from '@/assets/sichuan/em7.jpg';
 import em8 from '@/assets/sichuan/em8.jpg';
+
+
+// Tour 10 images
+import img10_1 from '@/assets/cd/cd10-1.jpg';
+import img10_2 from '@/assets/cd/cd10-2.jpg';
+import img10_3 from '@/assets/cd/cd10-3.jpg';
+import img10_4 from '@/assets/cd/cd10-4.jpg';
+import img10_5 from '@/assets/cd/cd10-5.jpg';
+import img10_6 from '@/assets/cd/cd10-6.jpg';
+import img10_7 from '@/assets/cd/cd10-7.jpg';
+import img10_8 from '@/assets/cd/cd10-8.jpg';
+// Tour 11 images
+import img11_1 from '@/assets/cd/cd11-1.jpg';
+import img11_2 from '@/assets/cd/cd11-2.jpg';
+import img11_3 from '@/assets/cd/cd11-3.jpg';
+import img11_4 from '@/assets/cd/cd11-4.jpg';
+import img11_5 from '@/assets/cd/cd11-5.jpg';
+import img11_6 from '@/assets/cd/cd11-6.jpg';
+import img11_7 from '@/assets/cd/cd11-7.jpg';
+import img11_8 from '@/assets/cd/cd11-8.jpg';
+// Tour 12 images
+import img12_1 from '@/assets/cd/cd12-1.jpg';
+import img12_2 from '@/assets/cd/cd12-2.jpg';
+import img12_3 from '@/assets/cd/cd12-3.jpg';
+import img12_4 from '@/assets/cd/cd12-4.jpg';
+import img12_5 from '@/assets/cd/cd12-5.jpg';
+import img12_6 from '@/assets/cd/cd12-6.jpg';
+import img12_7 from '@/assets/cd/cd12-7.jpg';
+import img12_8 from '@/assets/cd/cd12-8.jpg';
+
+// Tour 13 images
+import img13_1 from '@/assets/cd/cd13-1.jpg';
+import img13_2 from '@/assets/cd/cd13-2.jpg';
+import img13_3 from '@/assets/cd/cd13-3.jpg';
+import img13_4 from '@/assets/cd/cd13-4.jpg';
+import img13_5 from '@/assets/cd/cd13-5.jpg';
+import img13_6 from '@/assets/cd/cd13-6.jpg';
+import img13_7 from '@/assets/cd/cd13-7.jpg';
+import img13_8 from '@/assets/cd/cd13-8.jpg';
 
 export default {
   name: "Detail",
@@ -762,6 +1012,12 @@ export default {
         this.tourInfo.title = "Tea Picking & Panda Encounters in the Unspoiled";
         this.tourInfo.adultPrice = 155;
 
+      }
+      else if (id === 7) {
+        this.images = [img7_1, img7_2, img7_3, img7_4, img7_5, img7_6, ];
+        this.tourInfo.title = "Discover Wolong, Blue Tears & Zhongshu: Chengdu’s Secret Gems";
+        this.tourInfo.adultPrice = 145;
+
       }else if (id === 8) {
         this.images = [cdimg1,
           cdimg2,
@@ -788,8 +1044,28 @@ export default {
         this.tourInfo.title = "Emei Mountain & Ancient Town of Huanglongxi";
         this.tourInfo.adultPrice = 125;
         this.tourInfo.childPrice = 125;
-      }
+      }else if (id === 10) {
+        this.images = [img10_1, img10_2, img10_3, img10_4, img10_5, img10_6,img10_7,img10_8, ];
+        this.tourInfo.title = "Discover the Snowy Magic of Bipenggou in One Day";
+        this.tourInfo.adultPrice = 125;
 
+      }else if (id === 11) {
+        this.images = [img11_1, img11_2, img11_3, img11_4, img11_5, img11_6,img11_7,img11_8, ];
+        this.tourInfo.title = "Chengdu: A Journey Through Culture & Tradition";
+        this.tourInfo.adultPrice = 295;
+
+      }
+      else if (id === 12) {
+        this.images = [img12_1, img12_2, img12_3, img12_4, img12_5, img12_6,img12_7,img12_8, ];
+        this.tourInfo.title = "Zen Escape: A Journey into Mindful Serenity";
+        this.tourInfo.adultPrice = 155;
+
+      }else if (id === 13) {
+        this.images = [img13_1, img13_2, img13_3, img13_4, img13_5, img13_6,img13_7,img13_8, ];
+        this.tourInfo.title = "Discover Siguniang Mountain: One-Day Adventure";
+        this.tourInfo.adultPrice = 109;
+
+      }
       this.currentImage = this.images.length > 0 ? this.images[0] : '';
     },
     setActiveImage(img) {

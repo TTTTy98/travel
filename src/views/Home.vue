@@ -8,7 +8,7 @@
     <section class="image-gallery">
       <div class="gallery-container">
         <div v-for="(image, index) in galleryImages" :key="index" class="gallery-item">
-          <router-link to="/Detail">
+          <router-link :to="`/Detail${image.type === 'cd' ? 'Cd' : 'Sh'}/${image.id}`">
             <div class="image-overlay">
               <img :src="image.src" alt="Gallery Image" />
               <div class="overlay-content">
@@ -44,12 +44,12 @@
 </template>
 
 <script>
-import gallery1 from '@/assets/gallery1.jpg';
-import gallery2 from '@/assets/gallery2.jpg';
-import gallery3 from '@/assets/gallery3.jpg';
-import gallery4 from '@/assets/gallery4.jpg';
-import gallery5 from '@/assets/gallery5.jpg';
-import gallery6 from '@/assets/gallery6.jpg';
+import Tour1 from '@/assets/Tour1.jpg';
+import Tour2 from '@/assets/Tour2.jpg';
+import Tour3 from '@/assets/Tour3.jpg';
+import TourCd1 from '@/assets/TourCd1.jpg';
+import TourCd2 from '@/assets/TourCd2.jpg';
+import TourCd3 from '@/assets/TourCd3.jpg';
 import Header from "@/components/Header.vue";
 import Banner from "@/components/Banner.vue";
 
@@ -61,14 +61,16 @@ export default {
   },
   data() {
     return {
-      galleryImages: [
-        { src: gallery1, title: "Chengdu: Kung Fu Pan", description: "Start from $259/pax" },
-        { src: gallery2, title: "Cultural Walk", description: "Start from $259/pax" },
-        { src: gallery3, title: "Tea Ceremony", description: "Start from $259/pax" },
-        { src: gallery4, title: "Street Food Tour", description: "Start from $259/pax" },
-        { src: gallery5, title: "Landscape Escape", description: "Start from $259/pax" },
-        { src: gallery6, title: "Heritage Village", description: "Start from $259/pax" }
-      ]
+       galleryImages: [
+      // 上海 (Shanghai)
+      { src: Tour1, title: "Taste of Tradition: Shanghai Breakfast Tour", description: "Start from $60/pax", type: 'sh', id: 1 },
+      { src: Tour2, title: "Fengjing Watertown: A Journey into Shanghai’s Hidden Waterways", description: "Start from $159/pax", type: 'sh', id: 2 },
+      { src: Tour3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $169/pax", type: 'sh', id: 3 },
+      // 成都 (Chengdu)
+      { src: TourCd1, title: "Home of Kung Fu Panda – Pandas, Martial Arts & Tai Chi Wonders", description: "Start from $255/pax", type: 'cd', id: 1 },
+      { src: TourCd2, title: "Panda Volunteer Experience & Kuanzhai Alley Exploration", description: "Start from $255/pax", type: 'cd', id: 2 },
+      { src: TourCd3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $215/pax", type: 'cd', id: 3 }
+    ]
     };
   },
   methods: {
