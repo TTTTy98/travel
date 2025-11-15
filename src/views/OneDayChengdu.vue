@@ -26,6 +26,7 @@
         </el-row>
       </div>
     </section>
+
   </div>
 </template>
 
@@ -44,17 +45,20 @@ import TourCd10 from '@/assets/TourCd10.jpg';
 import TourCd11 from '@/assets/TourCd11.jpg';
 import TourCd12 from '@/assets/TourCd12.jpg';
 import TourCd13 from '@/assets/TourCd13.jpg';
+import Footer from "@/components/Footer.vue";
+
 export default {
   name: "About",
   components: {
     Header,
+    Footer
   },
   data() {
     return {
       items: [
         {
           id: 1,
-          title: "Home of Kung Fu Panda – Pandas, Martial Arts & Tai Chi Wonders",
+          title: "Chengdu: Home of Kung Fu Panda — Pandas, Martial Arts & Tai Chi Wonders",
           adultPrice: 255,
           image: TourCd1
         },

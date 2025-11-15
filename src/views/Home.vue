@@ -25,19 +25,22 @@
     <section class="whyArea">
       <h1>Why Travel with Us</h1>
       <p>
-        We are an elite team specializing in deep-dive tours of Chengdu and Guangzhou, made up of local experts with
-        overseas study and international work experience. Years of living and working in Europe,
-        North America, and Australia have given us a profound understanding of what international
-        travelers need and expect. At the same time, we remain rooted in China—drawing
-        inspiration from its rich cultural heritage and perfectly blending authentic local experiences
-        with a global perspective—dedicated to offering you truly distinctive journeys.
+        We are a team of friends with  <span class="bold-text">international backgrounds </span>and a shared <span class="bold-text">passion for travel.</span>
       </p>
+      <p>Shaped by our upbringing in China, enriched by studies at top universities in Europe and the U.S., and
+        broadened by work and life experiences around the world, we have a unique insight into what foreign travelers
+        really need when discovering China.</p>
+      <p>Wherever we are, one thing never changes: our love for exploring the world. We believe travel is not just about
+        reaching a destination, but about connecting with culture and people.</p>
       <router-link to="/About" class="about-link">
         <div class="aboutBtn"></div>
       </router-link>
-      <div class="endImg"></div>
+      <!-- <div class="endImg"></div> -->
     </section>
-
+    <!-- 评论 -->
+    <Evaluation />
+     <!-- 底部-->
+   <Footer />
     <!-- 移动端返回顶部按钮 -->
     <router-link to="#" class="back-to-top" @click.native="scrollToTop"></router-link>
   </div>
@@ -52,25 +55,28 @@ import TourCd2 from '@/assets/TourCd2.jpg';
 import TourCd3 from '@/assets/TourCd3.jpg';
 import Header from "@/components/Header.vue";
 import Banner from "@/components/Banner.vue";
-
+import Evaluation from "@/components/Evaluation.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   name: "HomePage",
   components: {
     Header,
-    Banner
+    Banner,
+    Evaluation,
+    Footer
   },
   data() {
     return {
-       galleryImages: [
-      // 上海 (Shanghai)
-      { src: Tour1, title: "Taste of Tradition: Shanghai Breakfast Tour", description: "Start from $60/pax", type: 'sh', id: 1 },
-      { src: Tour2, title: "Fengjing Watertown: A Journey into Shanghai’s Hidden Waterways", description: "Start from $159/pax", type: 'sh', id: 2 },
-      { src: Tour3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $169/pax", type: 'sh', id: 3 },
-      // 成都 (Chengdu)
-      { src: TourCd1, title: "Home of Kung Fu Panda – Pandas, Martial Arts & Tai Chi Wonders", description: "Start from $255/pax", type: 'cd', id: 1 },
-      { src: TourCd2, title: "Panda Volunteer Experience & Kuanzhai Alley Exploration", description: "Start from $255/pax", type: 'cd', id: 2 },
-      { src: TourCd3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $215/pax", type: 'cd', id: 3 }
-    ]
+      galleryImages: [
+        // 上海 (Shanghai)
+        { src: Tour1, title: "Taste of Tradition: Shanghai Breakfast Tour", description: "Start from $60/pax", type: 'sh', id: 1 },
+        { src: Tour2, title: "Fengjing Watertown: A Journey into Shanghai’s Hidden Waterways", description: "Start from $159/pax", type: 'sh', id: 2 },
+        { src: Tour3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $169/pax", type: 'sh', id: 3 },
+        // 成都 (Chengdu)
+        { src: TourCd1, title: "Home of Kung Fu Panda – Pandas, Martial Arts & Tai Chi Wonders", description: "Start from $255/pax", type: 'cd', id: 1 },
+        { src: TourCd2, title: "Panda Volunteer Experience & Kuanzhai Alley Exploration", description: "Start from $255/pax", type: 'cd', id: 2 },
+        { src: TourCd3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $215/pax", type: 'cd', id: 3 }
+      ]
     };
   },
   methods: {
@@ -88,7 +94,11 @@ export default {
   margin: 0;
   padding: 0;
 }
-
+.bold-text {
+  font-weight: bold;
+  color: #d4a574;
+  /* 可选：用品牌色突出关键信息 */
+}
 /* 轮播图下方图片 */
 .image-gallery {
   padding: 40px 0;
@@ -229,17 +239,25 @@ export default {
 
 /* 动画效果 */
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-15px);
   }
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .animate-text {
@@ -290,7 +308,8 @@ export default {
   }
 
   .back-to-top {
-    display: block; /* 启用返回顶部按钮 */
+    display: block;
+    /* 启用返回顶部按钮 */
   }
 }
 

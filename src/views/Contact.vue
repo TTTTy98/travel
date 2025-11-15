@@ -25,18 +25,21 @@
         WeChat: 178 8200 8669
       </h3>
     </section>
+       <Footer />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import Banner from "@/components/BannerNoLearn.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "About",
   components: {
     Header,
     Banner,
+    Footer
   },
 };
 </script>

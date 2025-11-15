@@ -63,13 +63,12 @@
       <el-tabs v-model="activeName" @tab-click="handleClick" style="width: 100%">
         <el-tab-pane label="Overview" name="first">
           <div v-if="tourInfo.id === 1">
-            Start your day the Shanghai way—through its breakfast tables and historic streets. This walking food tour
+            Start your day the Shanghai way, through its breakfast tables and historic streets. This walking food tour
             combines authentic morning flavors with stories hidden behind the city’s landmarks. From century-old dessert
             shops and bustling food stalls to iconic boulevards like Nanjing Road, People’s Square, Suzhou Creek, and
-            the
-            Bund, you’ll explore how Shanghai grew from a riverside town into a global metropolis—all while tasting the
-            dishes that fuel the city every morning. Perfect for first-time visitors and long-term residents alike, this
-            journey blends culinary discovery and cultural immersion in just a few hours.
+            the Bund, you’ll explore how Shanghai grew from a riverside town into a global metropolis, all while tasting
+            the dishes that fuel the city every morning. Perfect for first-time visitors and long-term residents alike,
+            this journey blends culinary discovery and cultural immersion in just a few hours.
             <p><span style="font-weight: bold;">What You’ll Experience</span></p>
             <ul>
               <li> <span class="bold-text">Soup Dumplings Restaurant (est. 1986)</span>
@@ -131,44 +130,42 @@
             </ul>
           </div>
           <div v-if="tourInfo.id === 2">
-            <div>
-              Fengjing watertowns remains one of the few places where authentic daily life still flows alongside its
-              canals. Here, locals sell homemade snacks, converse in Shanghainese, and live much as they have for
-              generations.</div>
-            <div>
+            <div class="paragraph">
+              The Fengjing watertowns remain as one of the few places where authentic daily life still flows alongside
+              its canals. Here, locals sell homemade snacks, converse in Shanghainese, and have lived there for
+              generations, keeping the old traditional way of living alive.</div>
+            <div class="paragraph">
               On this guided day trip, you’ll wander cobbled alleys, admire centuries-old bridges, and visit cultural
               landmarks that reveal the town’s rich past—from a grand merchant’s mansion to the preserved site of a
               Mao-era People’s Commune with its secret underground bunkers. Drift along the waterways on a private boat,
               savor authentic Shanghai dishes by the river, and hear fascinating stories of education, trade, and
               resilience that shaped the town’s character.</div>
-            <div>
+            <div class="paragraph">
               Just an hour’s drive from Shanghai, Fengjing offers a serene escape from the city and a chance to
-              experience
-              the essence of a living watertown—intimate, historical, and deeply local.
+              experience the essence of a living watertown—intimate, historical, and deeply local.
             </div>
           </div>
           <div v-if="tourInfo.id === 3">
-            <div>
+            <div class="paragraph">
               Just an hour from central Shanghai, Zhujiajiao is a sprawling historic water town with over 1,700 years of
               history, renowned for its 36 ancient stone bridges and well-preserved Ming and Qing architecture. The
               town’s streets are dense and charming, and its waterways form a picturesque grid, creating a classic
               Jiangnan water-town atmosphere that has endured for centuries.</div>
-            <div>
+            <div class="paragraph">
               Among its many bridges, the Fangsheng Bridge stands out as the town’s most iconic landmark. Built over 500
               years ago, this elegant stone bridge features three graceful arches and a gently curved walkway.
               Historically, locals would release fish and turtles here for good luck, giving the bridge its name, which
               means “Life Release Bridge.” Today, it remains a symbol of Zhujiajiao’s charm and history, perfect for
               strolling, photography, and admiring the surrounding canals.</div>
-            <div>
+            <div class="paragraph">
               Visitors can wander along stone-paved streets, cross historic bridges, or take a boat ride along the
               canals for a unique view of the town. The town also offers a variety of riverside restaurants, cozy cafés,
               and lively snack streets, making it easy to enjoy local delicacies while soaking in the serene scenery.
-            </div>
-            <div>
               With its extensive size, historic charm, dense waterways, and vibrant yet relaxed atmosphere, Zhujiajiao
               is ideal for travelers seeking cultural exploration, photography, and a full-day escape into classic
               Jiangnan life just outside Shanghai.
             </div>
+
           </div>
           <div v-if="tourInfo.id === 4">
             <div>Mount Qingcheng, often hailed as the birthplace of Taoism, stands as a living symbol of China's rich
@@ -198,52 +195,81 @@
           </div>
         </el-tab-pane>
         <el-tab-pane label="Highlights" name="second">
-          <div v-if="tourInfo.id === 1"></div>
-          <ul>
-            <li><span class="bold-text">Authentic Breakfast Tastes–</span> Savor egg pancakes, soup dumplings,
-              crispy buns, scallion pancakes, and traditional Chinese desserts, many from time-honored restaurants
-              dating
-              back over a century.</li>
-            <li><span class="bold-text">Hidden Food Stories –</span>
-              Learn the origins and rivalries behind Shanghai’s breakfast classics, from the debate over pan-fried buns
-              to
-              the city’s unique Western influences on local dishes.</li>
-            <li><span class="bold-text"> Historic Walk –</span>Pass through Nanjing Road,
-              once China’s first commercial hub; stroll People’s Square and uncover the history of its cinema, hotels,
-              and
-              even its weekend marriage market.</li>
-            <li><span class="bold-text">Cultural Landmarks –</span> Take in the skyline
-              from Suzhou Creek and walk along the Bund, discovering untold stories of how Shanghai became the “No.1
-              city
-              of the Far East.”</li>
-            <li><span class="bold-text"> Perfect Morning Experience –</span> A compact
-              yet rich journey that satisfies both the stomach and the mind, combining food, history, and culture.</li>
-          </ul>
+          <div v-if="tourInfo.id === 1">
+            <ul>
+              <li><span class="bold-text">Authentic Breakfast Tastes</span>
+                <p>Savor egg pancakes, soup dumplings,
+                  crispy buns, scallion pancakes, and traditional Chinese desserts, many from time-honored restaurants
+                  dating
+                  back over a century.</p>
+              </li>
+              <li><span class="bold-text">Hidden Food Stories </span>
+                <p>
+                  Learn the origins and rivalries behind Shanghai’s breakfast classics, from the debate over pan-fried
+                  buns
+                  to
+                  the city’s unique Western influences on local dishes.</p>
+              </li>
+              <li><span class="bold-text"> Historic Walk </span>
+                <p>Pass through Nanjing Road,
+                  once China’s first commercial hub; stroll People’s Square and uncover the history of its cinema,
+                  hotels,
+                  and
+                  even its weekend marriage market.</p>
+              </li>
+              <li><span class="bold-text">Cultural Landmarks </span>
+                <p> Take in the skyline
+                  from Suzhou Creek and walk along the Bund, discovering untold stories of how Shanghai became the “No.1
+                  city
+                  of the Far East.”</p>
+              </li>
+              <li><span class="bold-text"> Perfect Morning Experience</span>
+                <p>A compact
+                  yet rich journey that satisfies both the stomach and the mind, combining food, history, and culture.
+                </p>
+              </li>
+            </ul>
+          </div>
           <div v-if="tourInfo.id === 2">
             <ul>
-              <li>Wander through an authentic watertown still alive with local traditions</li>
-              <li>Glide along tranquil canals on a private boat ride beneath ancient bridges</li>
-              <li>Savor a riverside lunch featuring authentic Shanghai home-style cooking</li>
-              <li>Step inside a traditional mansion once owned by a wealthy local family</li>
-              <li>Explore a rare Mao-era People’s Commune site and its underground bunkers</li>
+              <li><span class="bold-text">Stroll through a living watertown</span>
+                <p>Wander narrow lanes and bustling markets where centuries-old customs remain part of daily life and
+                  taste traditional snacks.</p>
+              </li>
+              <li><span class="bold-text">Private boat ride beneath ancient bridges</span>
+                <p>Glide along tranquil canals on a private boat, passing arched stone bridges and riverside homes while
+                  your guide shares local stories.</p>
+              </li>
+              <li><span class="bold-text">Riverside home-style lunch</span>
+                <p>Savor a freshly prepared riverside meal of authentic Shanghai home cooking made from seasonal
+                  ingredients and family recipes.</p>
+              </li>
+              <li><span class="bold-text">Visit a restored merchant mansion</span>
+                <p>Step inside a traditional mansion once owned by a wealthy local family to explore ornate woodwork,
+                  inner courtyards, and period furnishings.</p>
+              </li>
+              <li><span class="bold-text">Explore a Mao-era People’s Commune site</span>
+                <p>Discover a rare commune complex from the Mao era, including preserved communal buildings and
+                  underground bunkers that reveal social and historical context.</p>
+              </li>
             </ul>
           </div>
           <div v-if="tourInfo.id === 3">
             <ul>
-              <li><span class="bold-text">Historic Water Town</span>– Over 1,700 years of history and a sprawling layout
-                to explore.</li>
-              <li><span class="bold-text">36 Ancient Stone Bridges </span>–
-                Including the iconic Fangsheng Bridge, built over 500 years ago.</li>
-              <li><span class="bold-text"> Ming & Qing Architecture </span>– Well-preserved traditional houses lining
-                stone-paved streets.</li>
-              <li><span class="bold-text">Picturesque Canals </span>– Waterways crisscross the town, perfect for
-                photography and exploration.</li>
-              <li><span class="bold-text"> Boat Ride Experience </span>– Leisurely boat tours through the canals for a
-                unique perspective.</li>
-              <li><span class="bold-text"> Riverside Dining </span>– Cafés and restaurants along the canals for local
-                snacks and meals.</li>
-              <li><span class="bold-text"> Cultural Immersion </span>– Stroll through lively streets, observe
-                traditional crafts, and daily life.</li>
+              <li><span class="bold-text">Historic Water Town</span><p>Over 1,700 years of history and a sprawling layout
+                to explore.</p></li>
+              <li><span class="bold-text">36 Ancient Stone Bridges </span><p>
+                Including the iconic Fangsheng Bridge, built over 500 years ago.</p></li>
+              <li><span class="bold-text"> Ming & Qing Architecture </span><p> Well-preserved traditional houses lining
+                stone-paved streets.</p></li>
+              <li><span class="bold-text">Picturesque Canals </span><p> Waterways crisscross the town, perfect for
+                photography and exploration.</p></li>
+              <li><span class="bold-text"> Boat Ride Experience </span><p> Leisurely boat tours through the canals for a
+                unique perspective.</p></li>
+              <li><span class="bold-text"> Riverside Dining </span><p> Cafés and restaurants along the canals for local
+                snacks and meals.</p></li>
+              <li><span class="bold-text"> Cultural Immersion </span><p> Stroll through lively streets, observe
+                traditional crafts, and daily life.</p></li>
             </ul>
           </div>
           <div v-if="tourInfo.id === 4">
@@ -273,22 +299,32 @@
         <el-tab-pane label="Itinerary" name="third">
           <div v-if="tourInfo.id === 1">
             <ul>
-              <li><span class="bold-text"> 8:30 / 9:00 AM | Meet Your Guide</span> Gather at McDonald’s, Location:
-                McDonald’s, 720 Nanjing East Road, Huangpu District, Shanghai, China, 200070.<a
-                  href="https://maps.app.goo.gl/yQqhATQ7HK61Nih37">（Open in google maps）</a> </li>
+              <li><span class="bold-text"> 8:30 / 9:00 AM | Meet Your Guide</span>
+                <p>Gather at McDonald’s, Location:
+                  McDonald’s, 720 Nanjing East Road, Huangpu District, Shanghai, China, 200070.<a
+                    href="https://maps.app.goo.gl/yQqhATQ7HK61Nih37">（Open in google maps）</a> </p>
+              </li>
 
-              <li><span class="bold-text">Begin the Food Walk</span>Start your journey with authentic Shanghai
-                breakfasts
-                and desserts at several time-honored restaurants，strolling through landmarks such as Nanjing Road,
-                People’s Square, Suzhou Creek, and the Bund. Along the way, taste local specialties like soup dumplings,
-                crispy buns, scallion pancakes, and traditional desserts from century-old restaurants.</li>
-              <li><span class="bold-text">Tour Duration</span> The walk typically lasts around 4 hours, covering
-                approximately 4.5 kilometers. Please wear suitable walking shoes, and prepare an umbrella in case of
-                rainy
-                weather.</li>
-              <li><span class="bold-text"> End Point</span> The tour concludes at the Bund, where the Huangpu River and
-                Shanghai’s skyline create the city’s most iconic view.</li>
-              <li><span class="bold-text">Please Note</span> Hotel pickup and drop-off are not included in this tour.
+              <li><span class="bold-text">Begin the Food Walk</span>
+                <p>Start your journey with authentic Shanghai
+                  breakfasts
+                  and desserts at several time-honored restaurants，strolling through landmarks such as Nanjing Road,
+                  People’s Square, Suzhou Creek, and the Bund. Along the way, taste local specialties like soup
+                  dumplings,
+                  crispy buns, scallion pancakes, and traditional desserts from century-old restaurants.</p>
+              </li>
+              <li><span class="bold-text">Tour Duration</span>
+                <p> The walk typically lasts around 4 hours, covering
+                  approximately 4.5 kilometers. Please wear suitable walking shoes, and prepare an umbrella in case of
+                  rainy
+                  weather.</p>
+              </li>
+              <li><span class="bold-text"> End Point</span>
+                <p> The tour concludes at the Bund, where the Huangpu River and
+                  Shanghai’s skyline create the city’s most iconic view.</p>
+              </li>
+              <li><span class="bold-text">Please Note</span>
+                <p> Hotel pickup and drop-off are not included in this tour.</p>
               </li>
             </ul>
           </div>
@@ -369,16 +405,16 @@
             </ul>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="Cost" name="fourth">
+        <el-tab-pane label="What’s included" name="fourth">
           <div v-if="tourInfo.id === 1">
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Includes</span></p>
             <ul>
               <li>Professional English-speaking guide </li>
               <li>Hearty traditional Chinese breakfast at 5+ authentic local eateries (enough to keep you satisfied for
                 the rest of the morning)</li>
               <li>Private taxi transfer from People’s Square to Suzhou Creek</li>
             </ul>
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Excludes</span></p>
             <ul>
               <li>Hotel pickup and drop-off</li>
               <li>Personal expenses such as additional food, drinks, or shopping</li>
@@ -386,7 +422,7 @@
             </ul>
           </div>
           <div v-if="tourInfo.id === 2">
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Includes</span></p>
             <ul>
               <li>Professional English-speaking guide </li>
               <li>Private car transfer with pick-up and drop-off from your hotel or chosen location</li>
@@ -394,7 +430,7 @@
               <li>Private boat ride along Fengjing’s waterways</li>
               <li>Entry to the Former Site of the People’s Commune and bunker system</li>
             </ul>
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Excludes</span></p>
             <ul>
               <li>Personal expenses (shopping, additional food or drinks)</li>
               <li>Gratuities for guide and driver</li>
@@ -402,7 +438,7 @@
             </ul>
           </div>
           <div v-if="tourInfo.id === 3">
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Includes</span></p>
             <ul>
               <li>Professional English-speaking guide </li>
               <li>Private car transfer with pick-up and drop-off from your hotel or chosen location</li>
@@ -410,7 +446,7 @@
               <li>Boat ride</li>
 
             </ul>
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Excludes</span></p>
             <ul>
               <li>Personal expenses (shopping, additional food or drinks)</li>
               <li>Gratuities for guide and driver</li>
@@ -418,13 +454,13 @@
             </ul>
           </div>
           <div v-if="tourInfo.id === 4">
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Includes</span></p>
             <ul>
               <li>Transportation to and from the attractions</li>
               <li>Services of an experienced tour guide</li>
               <li>Applicable taxes</li>
             </ul>
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Excludes</span></p>
             <ul>
               <li>Meals and drinks</li>
               <li>Optional activities or programs</li>
@@ -433,13 +469,13 @@
             </ul>
           </div>
           <div v-if="tourInfo.id === 5">
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Includes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Includes</span></p>
             <ul>
               <li>Private transportation</li>
               <li>Professional tour guide throughout the trip</li>
               <li>Tax</li>
             </ul>
-            <p style="margin-top: 2%;"><span style="font-weight: bold;">Excludes</span></p>
+            <p style="margin-top: 2%;"><span class="bold-text">Excludes</span></p>
             <ul>
               <li>Meals and beverages</li>
               <li>Optional activities or programs</li>
@@ -448,47 +484,55 @@
             </ul>
           </div>
         </el-tab-pane>
-<el-tab-pane label="Important info" name="five">
-        <p style="margin-top: 2%;"><span style="font-weight: bold;">Cancellation Policy</span></p>
-        1.Full Refund: Cancel at least 24 hours before the tour to receive a 100% refund.
-        <ul>
-          <li>Note: If you paid via PayPal or a PayPal-authorized credit card, a 4.4% transaction fee will be deducted
-            and is non-refundable, as we cannot recover it from PayPal. </li>
-          <li>Example: If you paid $100 via PayPal and cancel more than 24 hours in advance, you will receive $95.60
-            back, with $4.40 deducted for the fee.</li>
+        <el-tab-pane label="Important info" name="five">
+          <p style="margin-top: 2%;"><span class="bold-text">Cancellation Policy</span></p>
+          Full Refund: Cancel at least 24 hours before the tour to receive a 100% refund.
+          <ul>
+            <li>Note: If you paid via PayPal or a PayPal-authorized credit card, a 4.4% transaction fee will be deducted
+              and is non-refundable, as we cannot recover it from PayPal. </li>
+            <li>Example: If you paid $100 via PayPal and cancel more than 24 hours in advance, you will receive $95.60
+              back, with $4.40 deducted for the fee.</li>
 
-        </ul>
-        2.No Refund: Cancellations less than 24 hours before the tour or no-shows will not be refunded.
-        <p style="margin-top: 2%;"><span style="font-weight: bold;">What if it rains or the weather is bad?</span></p>
-        <div>1.Tours run rain or shine, so bringing an umbrella is recommended if needed.</div>
-        <div>2.In case of extreme weather (e.g., hurricanes, heavy storms, or extreme heat), the tour will be canceled
-          at least one day in advance and a full refund will be issued.</div>
-        <p style="margin-top: 2%;"><span style="font-weight: bold;">Dietary Information</span></p>
-        <ul>
-          <li>
-            <p>1.Advance Notice</p>For tours that include meals, please inform us of any dietary requirements (e.g.,
-            food allergies, vegetarian preferences) at the time of booking, so we can make the necessary arrangements.
-          </li>
-          <li>
-            <p>2.Allergies</p>While we will do our best to accommodate common food allergies, we cannot guarantee a
-            completely allergen-free environment. Cross-contamination (e.g., with nuts, gluten, or seafood) may occur in
-            local kitchens.
-          </li>
-          <li>
-            <p>3.Vegetarian Options</p>Vegetarian meals may be available upon request. However, please note that in some
-            destinations, vegetarian options are limited as many traditional dishes feature meat or animal-based
-            seasonings.
-          </li>
-        </ul>
+          </ul>
+          No Refund: Cancellations less than 24 hours before the tour or no-shows will not be refunded.
+          <p style="margin-top: 2%;"><span class="bold-text">What if it rains or the weather is bad?</span></p>
+          <div>Tours run rain or shine, so bringing an umbrella is recommended if needed.</div>
+          <div>In case of extreme weather (e.g., hurricanes, heavy storms, or extreme heat), the tour will be canceled
+            at least one day in advance and a full refund will be issued.</div>
+          <p style="margin-top: 2%;"><span class="bold-text">Dietary Information</span></p>
+          <ul>
+            <li>
+              <p><span style="font-weight: bold;">Advance Notice</span></p>For tours that include meals, please inform
+              us of any dietary requirements (e.g.,
+              food allergies, vegetarian preferences) at the time of booking, so we can make the necessary arrangements.
+            </li>
+            <li>
+              <p><span style="font-weight: bold;">Allergies</span></p>While we will do our best to accommodate common
+              food allergies, we cannot guarantee a
+              completely allergen-free environment. Cross-contamination (e.g., with nuts, gluten, or seafood) may occur
+              in
+              local kitchens.
+            </li>
+            <li>
+              <p><span style="font-weight: bold;">Vegetarian Options</span></p>Vegetarian meals may be available upon
+              request. However, please note that in
+              some
+              destinations, vegetarian options are limited as many traditional dishes feature meat or animal-based
+              seasonings.
+            </li>
+          </ul>
         </el-tab-pane>
 
       </el-tabs>
     </div>
+      <OtherSh :exclude-id="tourInfo.id"/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import OtherSh from "@/components/OtherSh.vue";
+
 // Tour 1 images
 import img1 from '@/assets/sh-1-1.jpg';
 import img2 from '@/assets/sh-1-2.jpg';
@@ -549,6 +593,7 @@ export default {
   name: "Detail",
   components: {
     Header,
+    OtherSh
   },
   data() {
     return {
@@ -618,7 +663,7 @@ export default {
         this.tourInfo.childPrice = 119;
       } else if (id === 3) {
         this.images = [img17, img18, img19, img20, img21, img22, img23, img24];
-        this.tourInfo.title = "Zhujiajiao Watertown: Historic Water Town & Canal Cruise";
+        this.tourInfo.title = "Zhujiajiao: Shanghai’s Most Iconic Water Town & Private Canal Cruise";
         this.tourInfo.adultPrice = 169;
         this.tourInfo.childPrice = 129;
       } else if (id === 4) {
@@ -632,7 +677,7 @@ export default {
           cdimg9,
           cdimg10,
           cdimg11,
-          ];
+        ];
         this.tourInfo.title = "Mount Qingcheng & Panda Valley Day Tour";
         this.tourInfo.adultPrice = 125;
         this.tourInfo.childPrice = 125; // 如果儿童价格相同
@@ -838,6 +883,31 @@ export default {
   opacity: 0;
 }
 
+/* --- 修改后的 Tab 标题样式 --- */
+/* 使用深度选择器 /deep/ */
+.el-tabs /deep/ .el-tabs__item {
+  background-color: #f0f0f0;
+  /* 设置背景为浅灰色 */
+  font-weight: bold;
+  /* 设置字体加粗 */
+  /* 实现文字居中 */
+  /* 水平居中 */
+
+}
+
+/* 可选：设置当前激活标签的样式 */
+.el-tabs /deep/ .el-tabs__item.is-active {
+  background-color: #e0e0e0;
+  /* 激活时使用稍深一点的灰色 */
+  /* 激活时文字颜色 */
+}
+
+/* 可选：设置标签悬停时的样式 */
+.el-tabs /deep/ .el-tabs__item:hover {
+  background-color: #e8e8e8;
+  /* 悬停时的背景色 */
+}
+
 /* 加粗文本 */
 .bold-text {
   font-weight: bold;
@@ -856,5 +926,9 @@ a:visited {
 
 a:hover {
   color: #0000ff;
+}
+
+.paragraph {
+  margin-bottom: 1.5em;
 }
 </style>

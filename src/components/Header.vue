@@ -2,7 +2,8 @@
   <header>
     <!-- 顶部联系信息栏 -->
     <div class="header">
-      <div class="logo"></div>
+      <!-- 添加点击事件 -->
+      <div class="logo" @click="goHome"></div>
       <div class="header-content">
         <span>Email: gzwukong@outlook.com</span>
         <span>WhatsApp: +8619966270998</span>
@@ -91,6 +92,15 @@ export default {
         this.desktopMenuOpen = false;
       }
     },
+    // 新增方法：跳转到首页
+    goHome() {
+      // 使用 Vue Router 进行编程式导航
+      this.$router.push('/');
+      // 如果需要在新窗口打开，可以使用：
+      // window.open('/', '_self');
+      // 或者原生跳转
+      // window.location.href = '/';
+    }
   },
   mounted() {
     // 点击外部关闭所有菜单
@@ -137,11 +147,13 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 添加鼠标指针样式 */
 .logo {
   width: 180px;
   height: 60px;
   background: url("@/assets/logo.jpg") no-repeat center center;
   background-size: contain;
+  cursor: pointer; /* 显示为手型指针 */
 }
 
 .header-content {

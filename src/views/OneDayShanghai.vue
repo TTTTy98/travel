@@ -34,11 +34,13 @@ import Header from "@/components/Header.vue";
 import Tour1 from '@/assets/Tour1.jpg';
 import Tour2 from '@/assets/Tour2.jpg';
 import Tour3 from '@/assets/Tour3.jpg';
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "About",
   components: {
     Header,
+    Footer
   },
   data() {
     return {
@@ -59,7 +61,7 @@ export default {
         },
         {
           id: 3,
-          title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise",
+          title: "Zhujiajiao: Shanghai’s Most Iconic Water Town & Private Canal Cruise",
           adultPrice: 169,
           childPrice:129,
           image: Tour3
