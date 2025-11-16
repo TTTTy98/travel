@@ -526,12 +526,14 @@
       </el-tabs>
     </div>
       <OtherSh :exclude-id="tourInfo.id"/>
+     <Footer  />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import OtherSh from "@/components/OtherSh.vue";
+import Footer from "@/components/Footer.vue";
 
 // Tour 1 images
 import img1 from '@/assets/sh-1-1.jpg';
@@ -593,7 +595,8 @@ export default {
   name: "Detail",
   components: {
     Header,
-    OtherSh
+    OtherSh,
+    Footer
   },
   data() {
     return {

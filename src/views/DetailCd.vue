@@ -1228,12 +1228,15 @@
       </el-tabs>
     </div>
   <OtherCd :exclude-id="tourInfo.id"/>
+<Footer  />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import OtherCd from "@/components/OtherCd.vue";
+import Footer from "@/components/Footer.vue";
+
 // Tour 1 images
 import img1 from '@/assets/cd/cd1-1.jpg';
 import img2 from '@/assets/cd/cd1-2.jpg';
@@ -1360,7 +1363,8 @@ export default {
   name: "Detail",
   components: {
     Header,
-    OtherCd
+    OtherCd,
+    Footer
   },
   data() {
     return {

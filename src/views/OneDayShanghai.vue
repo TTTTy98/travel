@@ -26,6 +26,7 @@
         </el-row>
       </div>
     </section>
+    <Footer  />
   </div>
 </template>
 
