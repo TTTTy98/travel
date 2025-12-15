@@ -73,9 +73,9 @@ export default {
         { src: Tour2, title: "Fengjing Watertown: A Journey into Shanghai’s Hidden Waterways", description: "Start from $159/pax", type: 'sh', id: 2 },
         { src: Tour3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $169/pax", type: 'sh', id: 3 },
         // 成都 (Chengdu)
-        { src: TourCd1, title: "Home of Kung Fu Panda – Pandas, Martial Arts & Tai Chi Wonders", description: "Start from $255/pax", type: 'cd', id: 1 },
+        { src: TourCd1, title: "Chengdu: Home of Kung Fu Panda — Pandas, Martial Arts & Tai Chi Wonders", description: "Start from $255/pax", type: 'cd', id: 1 },
         { src: TourCd2, title: "Panda Volunteer Experience & Kuanzhai Alley Exploration", description: "Start from $255/pax", type: 'cd', id: 2 },
-        { src: TourCd3, title: "Zhujiajiao Watertown: Historic Water Town & Canal Cruise", description: "Start from $215/pax", type: 'cd', id: 3 }
+        { src: TourCd3, title: "Chengdu to Tibetan Village: Experience a Day in Tibetan Life", description: "Start from $215/pax", type: 'cd', id: 3 }
       ]
     };
   },

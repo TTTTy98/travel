@@ -124,9 +124,7 @@
                   creating a dazzling display of prosperity. Behind the grand facades lie untold stories of the city’s
                   golden era and its defining moments in history.</p>
               </li>
-              <li><span class="bold-text">Scallion Pancake Stall</span>
-                <p></p>
-              </li>
+              
             </ul>
           </div>
           <div v-if="tourInfo.id === 2">

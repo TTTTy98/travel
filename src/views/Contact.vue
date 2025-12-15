@@ -7,23 +7,15 @@
     <!-- 联系方式区域 -->
     <section class="contact-section">
       <h3 class="contact-item">
-        <a href="mailto:chengduexplorertour@gmail.com" class="contact-link">
-          E-mail: chengduexplorertour@gmail.com
-        </a>
-      </h3>
+          <a href="mailto:chinavoyagetrip@gmail.com" class="contact-link">E-mail: chinavoyagetrip@gmail.com</a>
+        </h3>
       <h3 class="contact-item">
-        <a href="tel:+8618512852813" class="contact-link">
-          Phone: +86 185 1285 2813
-        </a>
-      </h3>
+          <a href="https://wa.me/18940906520" target="_blank" class="contact-link">WhatsApp: +86 18940906520</a>
+        </h3>
       <h3 class="contact-item">
-        <a href="https://wa.me/8613880311099" target="_blank" class="contact-link">
-          WhatsApp: +86 138 8031 1099
-        </a>
-      </h3>
-      <h3 class="contact-item">
-        WeChat: 178 8200 8669
-      </h3>
+          WeChat: 15840322048
+        </h3>
+     
     </section>
        <Footer />
   </div>

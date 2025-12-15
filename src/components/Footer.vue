@@ -4,19 +4,20 @@
       <!-- 联系我们 -->
       <div class="footer-column contact">
         <h3>Contact us</h3>
-        <div class="wechat-section">
+        <!-- <div class="wechat-section">
           <h4>Wechat</h4>
           <img src="https://via.placeholder.com/150?text=WeChat+QR+Code" alt="WeChat QR Code" class="qr-code" />
-        </div>
+        </div> -->
         <div class="contact-info">
-          <p>- <strong>Email:</strong> 88888888888888888888888.com</p>
-          <p>- <strong>Whatsapp:</strong> +86 8888888888888</p>
+          <p>- <strong>Wechat:</strong> 15840322048</p>
+          <p>- <strong>Email:</strong> chinavoyagetrip@gmail.com</p>
+          <p>- <strong>Whatsapp:</strong> +86 18940906520</p>
         </div>
-        <div class="social-icons">
+        <!-- <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
-        </div>
+        </div> -->
       </div>
 
       <!-- 旅游项目 -->

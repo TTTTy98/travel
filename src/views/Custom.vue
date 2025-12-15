@@ -14,13 +14,13 @@
 
       <div class="contact-list">
         <h3 class="contact-item">
-          <a href="mailto:chengduexplorertour@gmail.com" class="contact-link">E-mail: chengduexplorertour@gmail.com</a>
+          <a href="mailto:chinavoyagetrip@gmail.com" class="contact-link">E-mail: chinavoyagetrip@gmail.com</a>
         </h3>
         <h3 class="contact-item">
-          <a href="https://wa.me/8613880311099" target="_blank" class="contact-link">WhatsApp: +86 138 8031 1099</a>
+          <a href="https://wa.me/18940906520" target="_blank" class="contact-link">WhatsApp: +86 18940906520</a>
         </h3>
         <h3 class="contact-item">
-          WeChat: 178 8200 8669
+          WeChat: 15840322048
         </h3>
       </div>
     </section>

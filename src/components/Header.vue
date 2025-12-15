@@ -5,9 +5,9 @@
       <!-- 添加点击事件 -->
       <div class="logo" @click="goHome"></div>
       <div class="header-content">
-        <span>Email: gzwukong@outlook.com</span>
-        <span>WhatsApp: +8619966270998</span>
-        <span>WxChat: aaaa</span>
+        <span>Email: chinavoyagetrip@gmail.com</span>
+        <span>WhatsApp: +86 18940906520</span>
+        <span>WxChat: 15840322048</span>
       </div>
 
       <!-- 汉堡菜单按钮（仅在移动端显示） -->
@@ -149,10 +149,10 @@ header {
 
 /* 添加鼠标指针样式 */
 .logo {
-  width: 180px;
+  width: 130px;
   height: 60px;
   background: url("@/assets/logo.jpg") no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   cursor: pointer; /* 显示为手型指针 */
 }
 

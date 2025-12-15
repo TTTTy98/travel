@@ -70,15 +70,13 @@ export default {
       autoPlayInterval: null,
       autoPlayDelay: 5000, // 5秒自动翻页
       testimonials: [
-        { id: 1, text: "Beautiful architecture and river views. A must-do tour!", name: "Markus", country: "South Africa", flag: "https://flagcdn.com/w20/za.png" },
-        { id: 2, text: "The food was amazing! Dumplings and Baozi were delicious.", name: "Robert", country: "UK", flag: "https://flagcdn.com/w20/gb.png" },
-        { id: 3, text: "Very informative guide. Learned so much about Shanghai.", name: "Gregory", country: "UK", flag: "https://flagcdn.com/w20/gb.png" },
-        { id: 4, text: "Perfect small group size. Felt personal and engaging.", name: "Sophie", country: "France", flag: "https://flagcdn.com/w20/fr.png" },
-        { id: 5, text: "The Bund at night is breathtaking. Worth every penny.", name: "James", country: "USA", flag: "https://flagcdn.com/w20/us.png" },
-        { id: 6, text: "Great mix of history, culture, and food. Highly recommend!", name: "Lina", country: "Japan", flag: "https://flagcdn.com/w20/jp.png" },
-        { id: 7, text: "Friendly guide and well-organized itinerary.", name: "Carlos", country: "Spain", flag: "https://flagcdn.com/w20/es.png" },
-        { id: 8, text: "A unique way to explore the city. Loved the boat ride.", name: "Emma", country: "Australia", flag: "https://flagcdn.com/w20/au.png" },
-        { id: 9, text: "Will definitely come back and bring my family next time.", name: "Thomas", country: "Germany", flag: "https://flagcdn.com/w20/de.png" }
+        { id: 1, text: "Such a fun tour. The scallion pancake stall alone was worth it — seriously the best one I’ve ever had. The guide kept things light and told a lot of cool little stories about the city. Felt more like hanging out with a local than being on a tour.", name: "Jack", country: "Australia", flag: "https://flagcdn.com/w20/au.png" },
+        { id: 2, text: "Loved this day so much. Helping with the pandas was adorable and honestly kind of surreal. Then we walked through Kuan-Zhai Alleys and it was super chill. My kid had a blast too, which made it even better.", name: "Emma", country: "Netherlands", flag: "https://flagcdn.com/w20/nl.png" },
+        { id: 3, text: "Great experience all around. The pandas were super cute, but the tea-picking at Mengding Mountain was my favorite part. Really peaceful, and I even learned that matcha originally came from China — never knew that!", name: "Martina", country: "Spain", flag: "https://flagcdn.com/w20/es.png" },
+        { id: 4, text: "Really glad I did this trip. Hard to believe the place is just a couple hours from Chengdu because the snow views at Riyueping were insane. The cable car ride was gorgeous — totally worth it.", name: "Paul", country: "Germany", flag: "https://flagcdn.com/w20/de.png" },
+        { id: 5, text: "Beautiful village and such friendly people. The food was awesome too. I especially liked the cultural workshops — they made the whole experience feel personal and meaningful.", name: "James", country: "USA", flag: "https://flagcdn.com/w20/us.png" },
+        { id: 6, text: "Really enjoyed this visit. The old bridges and canals were super charming, and the whole town had that calm Jiangnan vibe. The boat ride was the perfect way to end the day.", name: "Jean", country: "France", flag: "https://flagcdn.com/w20/fr.png" },
+
       ]
     };
   },

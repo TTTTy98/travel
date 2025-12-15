@@ -17,7 +17,7 @@
         >
           <h1>{{ item.title }}</h1>
           <p>{{ item.description }}</p>
-          <router-link to="/Learn" style="color: white; text-decoration: none;">
+          <!-- <router-link to="/Learn" style="color: white; text-decoration: none;">
             <el-button
               type="warning"
               v-if="currentIndex === 3 || currentIndex === 4"
@@ -26,7 +26,7 @@
             >
               Learn more
             </el-button>
-          </router-link>
+          </router-link> -->
         </div>
       </div>
     </div>

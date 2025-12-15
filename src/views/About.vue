@@ -5,7 +5,7 @@
 
     <!-- 主内容区 -->
     <section class="about-section">
-      <h2 class="subtitle">✨ About Us</h2>
+      <h2 class="subtitle">  About Us</h2>
 
       <p>
         We are a team of friends with
@@ -37,7 +37,7 @@
         foreign travelers face in China.
       </p>
 
-      <h2 class="subtitle">✨ Data & Insights: Why We Do This</h2>
+      <h2 class="subtitle">  Data & Insights: Why We Do This</h2>
       <p>
         To better understand the needs of global travelers, our team invested all resources into
         <span class="bold-text">365 days of big-data research and fieldwork</span>. The results were eye-opening:
@@ -58,7 +58,7 @@
         <span class="bold-text">new approach</span> to travel.
       </p>
 
-      <h2 class="subtitle">✨ Our Answer</h2>
+      <h2 class="subtitle">  Our Answer</h2>
       <p>
         That’s why we founded this company, focusing on
         <span class="bold-text">immersive cultural experiences</span> in Chengdu and Shanghai.
@@ -76,7 +76,7 @@
         <span class="bold-text">40+ countries worldwide</span>.
       </p>
 
-      <h2 class="subtitle">✨ Our Signature Experiences</h2>
+      <h2 class="subtitle">  Our Signature Experiences</h2>
       <p>To break away from the traditional “sightseeing mode,” we designed a series of one-of-a-kind immersive
         programs:</p>
       <ul class="list">
@@ -95,7 +95,7 @@
         unique, and life-changing memories.
       </p>
 
-      <h2 class="subtitle">✨ Our Achievements</h2>
+      <h2 class="subtitle">  Our Achievements</h2>
       <p>Since our founding, our work has been recognized by travelers and the market:</p>
       <ul class="list">
         <li>365 days of in-depth research and product development</li>
@@ -107,7 +107,7 @@
         we have quickly become one of the most promising new brands in China’s inbound tourism market.
       </p>
 
-      <h2 class="subtitle">✨ Our Vision</h2>
+      <h2 class="subtitle">  Our Vision</h2>
       <p>
         We hope that every traveler who comes to China takes away not just photos,
         but a genuine cultural connection. Here, travel is more than crossing borders —
