@@ -7,7 +7,7 @@
       <div class="header-content">
         <span>Email: chinavoyagetrip@gmail.com</span>
         <span>WhatsApp: +86 18940906520</span>
-        <span>WxChat: 15840322048</span>
+        <span>WeChat: 15840322048</span>
       </div>
 
       <!-- 汉堡菜单按钮（仅在移动端显示） -->
