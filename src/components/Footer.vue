@@ -3,36 +3,25 @@
     <div class="footer-container">
       <!-- 联系我们 -->
       <div class="footer-column contact">
-        <h3>Contact us</h3>
-        <!-- <div class="wechat-section">
-          <h4>Wechat</h4>
-          <img src="https://via.placeholder.com/150?text=WeChat+QR+Code" alt="WeChat QR Code" class="qr-code" />
-        </div> -->
+        <h3>Contact Us</h3>
         <div class="contact-info">
-          <p>- <strong>Wechat:</strong> 15840322048</p>
-          <p>- <strong>Email:</strong> chinavoyagetrip@gmail.com</p>
-          <p>- <strong>Whatsapp:</strong> +86 18940906520</p>
+          <p><strong>WeChat:</strong> 15840322048</p>
+          <p><strong>Email:</strong> chinavoyagetrip@gmail.com</p>
+          <p><strong>WhatsApp:</strong> +86 189 4090 6520</p>
         </div>
-        <!-- <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
-        </div> -->
       </div>
 
       <!-- 旅游项目 -->
       <div class="footer-column tours">
         <h3>Tours</h3>
         <ul>
-          <router-link to="/DetailSh/1"><li>Taste of Tradition: Shanghai Breakfast Tour</li></router-link>
+      <router-link to="/DetailSh/1"><li>Taste of Tradition: Shanghai Breakfast Tour</li></router-link>
           <router-link to="/DetailCd/5"><li>Leshan Giant Buddha & Pandas: A Day of Wonder</li></router-link>
           <router-link to="/DetailCd/6"><li>Tea Picking & Panda Encounters in the Unspoiled</li></router-link>
           <router-link to="/DetailCd/8"><li>Mount Qingcheng & Panda Valley Day Tour</li></router-link>
           <router-link to="/DetailCd/9"><li>Emei Mountain & Ancient Town of Huanglongxi</li></router-link>
           <router-link to="/DetailCd/12"><li>Zen Escape: A Journey into Mindful Serenity</li></router-link>
           <router-link to="/DetailCd/13"><li>Discover Siguniang Mountain: One-Day Adventure</li></router-link>
-
-          
         </ul>
       </div>
 
@@ -40,39 +29,23 @@
       <div class="footer-column company">
         <h3>Company</h3>
         <ul>
-           <router-link to="/About"><li>About us</li></router-link>
-       
+          <li><router-link to="/About">About Us</router-link></li>
         </ul>
-       
       </div>
+    </div>
 
-      <!-- 问题咨询 -->
-      <!-- <div class="footer-column questions">
-        <h3>Have questions?</h3>
-        <p>Please leave your questions below and we will respond in 12 hours.</p>
-        <form @submit.prevent="handleSubmit">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" rows="5" required></textarea>
-          <button type="submit">SEND</button>
-        </form>
-      </div> -->
-    </div>
+    <!-- 底部版权（可选，你已注释） -->
+    <!--
     <div class="footer-bottom">
-      <!-- <p>&copy; 2025 Eastbound and Beyond. All rights reserved.</p> -->
+      <p>&copy; 2025 Eastbound and Beyond. All rights reserved.</p>
     </div>
+    -->
   </footer>
 </template>
 
 <script>
 export default {
-  name: "Footer",
-  methods: {
-    handleSubmit() {
-      // 这里可以添加表单提交逻辑
-      alert('Thank you for your message! We will get back to you soon.');
-    }
-  }
+  name: "Footer"
 };
 </script>
 
@@ -86,72 +59,32 @@ export default {
 
 .footer-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1150px;
   margin: 0 auto;
-  gap: 70px;
+  gap: 30px 50px;
 }
 
 .footer-column {
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 280px; /* 最小 280px，允许收缩 */
 }
 
 .footer-column h3 {
   font-size: 18px;
   margin-bottom: 20px;
   color: #fff;
+  font-weight: bold;
 }
 
-.footer-column h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #d4a574;
-}
-
-/* 联系我们 */
-.contact .wechat-section {
-  margin-bottom: 20px;
-}
-
-.contact .qr-code {
-  width: 120px;
-  height: 120px;
-  border: 2px solid #d4a574;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.contact .contact-info p {
+/* 联系信息 */
+.contact-info p {
   margin: 8px 0;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
-.contact .social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.contact .social-icons a:hover {
-  background-color: #d4a574;
-  color: #111;
-}
-
-/* 旅游项目和公司信息 */
+/* 链接列表 */
 .footer-column ul {
   list-style: none;
   padding: 0;
@@ -160,64 +93,23 @@ export default {
 
 .footer-column li {
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .footer-column a {
   color: #ddd;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
+  display: block; /* 扩大点击区域 */
+  padding: 6px 0;
+  font-size: 15px;
 }
 
 .footer-column a:hover {
   color: #d4a574;
 }
 
-/* 问题咨询 */
-.questions p {
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.questions form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.questions input,
-.questions textarea {
-  padding: 12px;
-  border: 1px solid #444;
-  background-color: #222;
-  color: white;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: border-color 0.3s ease;
-}
-
-.questions input:focus,
-.questions textarea:focus {
-  outline: none;
-  border-color: #d4a574;
-}
-
-.questions button {
-  padding: 12px;
-  background-color: white;
-  color: #111;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.questions button:hover {
-  background-color: #d4a574;
-  color: white;
-}
-
-/* 底部版权 -->
+/* 底部版权 */
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
@@ -227,86 +119,46 @@ export default {
   color: #888;
 }
 
-/* 响应式设计 */
-@media (max-width: 1024px) {
-  .footer-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footer-column {
-    min-width: 250px;
-  }
-}
-
+/* 移动端适配 */
 @media (max-width: 768px) {
   .footer-container {
-    gap: 15px;
+    gap: 25px;
   }
 
   .footer-column {
-    min-width: 200px;
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* 每列占满一行 */
   }
 
-  .contact .qr-code {
-    width: 100px;
-    height: 100px;
-  }
-
-  .questions form {
-    gap: 8px;
-  }
-
-  .questions input,
-  .questions textarea {
-    padding: 10px;
-    font-size: 13px;
-  }
-
-  .questions button {
-    padding: 10px;
+  .contact-info p {
     font-size: 14px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  /* 缩短标题间距 */
+  .footer-column h3 {
+    margin-bottom: 16px;
+    font-size: 17px;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-container {
-    padding: 0 10px;
+  .site-footer {
+    padding: 30px 15px 15px;
   }
 
-  .footer-column {
-    min-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .contact .qr-code {
-    width: 80px;
-    height: 80px;
-  }
-
-  .contact .social-icons {
-    gap: 10px;
-  }
-
-  .contact .social-icons a {
-    width: 32px;
-    height: 32px;
-  }
-
-  .questions p {
-    font-size: 14px;
-  }
-
-  .questions input,
-  .questions textarea {
-    padding: 8px;
-    font-size: 12px;
-  }
-
-  .questions button {
-    padding: 8px;
+  .contact-info p {
     font-size: 13px;
   }
+
+  .footer-column a {
+    font-size: 13px;
+  }
+
+  /* WhatsApp 号码添加空格提升可读性 */
+  /* 已在模板中处理 */
 }
 </style>

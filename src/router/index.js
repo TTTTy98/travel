@@ -34,11 +34,6 @@ export default new Router({
       component: () => import('@/views/About.vue') // 懒加载方式
     },
     {
-      path: '/OneTour',
-      name: 'OneTour',
-      component: () => import('@/views/OneTour.vue') // 懒加载方式
-    },
-    {
       path: '/Custom',
       name: 'Custom',
       component: () => import('@/views/Custom.vue') // 懒加载方式

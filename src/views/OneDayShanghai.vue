@@ -2,20 +2,28 @@
   <div class="homepage">
     <!-- 顶部导航栏 -->
     <Header />
-    <section style="padding: 0px 200px; background-color: white;">
+    
+    <section class="tours-section">
       <div class="card-grid">
         <el-row :gutter="20">
-          <el-col :span="6" v-for="item in items" :key="item.id">
-            <router-link :to="`/DetailSh/${item.id}`" style="text-decoration: none; color: inherit;">
-              <el-card :body-style="{ padding: '0px' }" shadow="hover" style="margin-top: 30px;">
-                <img :src="item.image" class="card-image" />
+          <!-- 响应式列：手机1列，平板2列，桌面3~4列 -->
+          <el-col
+            :xs="24"
+            :sm="12"
+            :md="8"
+            :lg="8" 
+            v-for="item in items"
+            :key="item.id"
+          >
+            <router-link :to="`/DetailSh/${item.id}`" class="card-link">
+              <el-card :body-style="{ padding: '0px' }" shadow="hover" class="tour-card">
+                <img :src="item.image" class="card-image" :alt="item.title" />
                 <div class="card-content">
                   <div class="title">{{ item.title }}</div>
                   <div class="price-info">
                     <div class="price-item">Adult: ${{ formatPrice(item.adultPrice) }}/Pax</div>
                     <div class="price-item">Child: ${{ formatPrice(item.childPrice) }}/Pax</div>
                   </div>
-                  <!-- 新增年龄说明 -->
                   <div class="age-note">
                     Adult ages 13 and above, Child ages 4–12
                   </div>
@@ -26,7 +34,8 @@
         </el-row>
       </div>
     </section>
-    <Footer  />
+    
+    <Footer />
   </div>
 </template>
 
@@ -38,7 +47,7 @@ import Tour3 from '@/assets/Tour3.jpg';
 import Footer from "@/components/Footer.vue";
 
 export default {
-  name: "About",
+  name: "ShanghaiTours", // 建议重命名，但非必需
   components: {
     Header,
     Footer
@@ -64,7 +73,7 @@ export default {
           id: 3,
           title: "Zhujiajiao: Shanghai’s Most Iconic Water Town & Private Canal Cruise",
           adultPrice: 169,
-          childPrice:129,
+          childPrice: 129,
           image: Tour3
         }
       ]
@@ -83,50 +92,88 @@ export default {
   font-family: 'Arial', sans-serif;
 }
 
-.card-image {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+.tours-section {
+  padding: 30px 15px; /* 移动端安全内边距 */
+  background-color: white;
 }
 
-.card-image:hover {
-  transform: scale(1.1);
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.tour-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-image {
+  width: 100%;
+  height: 220px; /* 移动端友好高度 */
+  object-fit: cover;
 }
 
 .card-content {
   padding: 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {
   font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 6px;
-  color: #333;
-}
-
-.city {
-  color: #999;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 8px;
+  color: #333;
+  line-height: 1.4;
+  min-height: 42px; /* 保证2行高度一致 */
 }
 
 .price-info {
-  margin-top: 8px;
+  margin: 6px 0;
   font-size: 14px;
   color: #666;
-  
 }
 
 .price-item {
   margin-bottom: 4px;
 }
 
-/* 新增的年龄说明样式 */
 .age-note {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #aaa;
+  font-size: 11px;
+  color: #999;
   line-height: 1.4;
+}
+
+/* 平板及以上 */
+@media (min-width: 768px) {
+  .card-image {
+    height: 280px;
+  }
+
+  .title {
+    font-size: 16px;
+    min-height: 48px;
+  }
+}
+
+/* 桌面端 */
+@media (min-width: 1024px) {
+  .card-image {
+    height: 320px;
+  }
+
+  .tours-section {
+    padding: 40px 20px;
+  }
 }
 </style>

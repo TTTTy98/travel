@@ -2,41 +2,42 @@
   <div class="homepage">
     <!-- 顶部导航栏 -->
     <Header />
-
-    <section style="
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        background-color: white;
-        padding: 30px 0;
-      ">
+    
+    <section class="detail-section">
       <el-row :gutter="20" class="magnifier-wrapper" type="flex" align="top">
         <!-- 左侧缩略图 -->
-        <el-col :span="4">
+        <el-col :span="4" class="thumb-column">
           <div class="thumb-list">
-            <div v-for="(img, index) in images" :key="index" class="thumb" :class="{ active: img === currentImage }"
-              @click="setActiveImage(img)">
+            <div
+              v-for="(img, index) in images"
+              :key="index"
+              class="thumb"
+              :class="{ active: img === currentImage }"
+              @click="setActiveImage(img)"
+            >
               <img :src="img" alt="Thumbnail" />
             </div>
           </div>
         </el-col>
-
-        <!-- 中间主图 -->
-        <el-col :span="10">
+        <!-- 中间主图（居中） -->
+        <el-col :span="10" class="main-image-col">
           <div class="image-container">
             <transition name="fade" mode="out-in">
-              <img :src="currentImage" class="main-img" ref="mainImage" :key="currentImage" alt="Main product image" />
+              <img
+                :src="currentImage"
+                class="main-img"
+                ref="mainImage"
+                :key="currentImage"
+                alt="Main product image"
+              />
             </transition>
-            <!-- 放大镜遮罩（当前未启用交互，仅保留结构） -->
             <div class="mask" v-if="showZoom" :style="{ top: maskTop + 'px', left: maskLeft + 'px' }"></div>
           </div>
         </el-col>
-
         <!-- 右侧产品信息 -->
-        <el-col :span="10">
+        <el-col :span="10" class="info-column">
           <div class="product-info-simple">
             <h1 class="main-title">{{ tourInfo.title }}</h1>
-
             <div class="price-section">
               <div class="price-item adult-price">
                 Adult: <span class="price-amount">${{ formatPrice(tourInfo.adultPrice) }}</span>/Pax
@@ -45,7 +46,6 @@
                 Child: <span class="price-amount">${{ formatPrice(tourInfo.childPrice) }}</span>/Pax
               </div>
             </div>
-
             <div class="age-note">
               {{ tourInfo.ageNote }}
             </div>
@@ -53,14 +53,11 @@
         </el-col>
       </el-row>
     </section>
-    <!-- 详情 Tabs -->
-    <div style="
-        display: flex;
-        background-color: white;
-        padding: 0% 20%;
-        justify-content: center;
-      ">
-      <el-tabs v-model="activeName" @tab-click="handleClick" style="width: 100%">
+
+    <!-- Tabs 区域 -->
+    <div class="tabs-section">
+      <el-tabs v-model="activeName" @tab-click="handleClick">
+        <!-- ========== 所有 Tab 内容完全保留 ========== -->
         <el-tab-pane label="Overview" name="first">
           <div v-if="tourInfo.id === 1">
             Start your day the Shanghai way, through its breakfast tables and historic streets. This walking food tour
@@ -124,7 +121,6 @@
                   creating a dazzling display of prosperity. Behind the grand facades lie untold stories of the city’s
                   golden era and its defining moments in history.</p>
               </li>
-              
             </ul>
           </div>
           <div v-if="tourInfo.id === 2">
@@ -163,7 +159,6 @@
               is ideal for travelers seeking cultural exploration, photography, and a full-day escape into classic
               Jiangnan life just outside Shanghai.
             </div>
-
           </div>
           <div v-if="tourInfo.id === 4">
             <div>Mount Qingcheng, often hailed as the birthplace of Taoism, stands as a living symbol of China's rich
@@ -192,6 +187,7 @@
               unforgettable experience for travelers seeking both adventure and serenity.</div>
           </div>
         </el-tab-pane>
+
         <el-tab-pane label="Highlights" name="second">
           <div v-if="tourInfo.id === 1">
             <ul>
@@ -294,6 +290,7 @@
             </ul>
           </div>
         </el-tab-pane>
+
         <el-tab-pane label="Itinerary" name="third">
           <div v-if="tourInfo.id === 1">
             <ul>
@@ -302,7 +299,6 @@
                   McDonald’s, 720 Nanjing East Road, Huangpu District, Shanghai, China, 200070.<a
                     href="https://maps.app.goo.gl/yQqhATQ7HK61Nih37">（Open in google maps）</a> </p>
               </li>
-
               <li><span class="bold-text">Begin the Food Walk</span>
                 <p>Start your journey with authentic Shanghai
                   breakfasts
@@ -333,7 +329,6 @@
             <div class="bold-text">Daytime in Fengjing:</div>
             <ul>
               <li> Stroll through riverside alleys and sample traditional snacks</li>
-
               <li>Visit the Wang Family Mansion, a historic residence reflecting traditional Chinese architecture and
                 values</li>
               <li>Cross centuries-old stone bridges and enjoy scenic canal views</li>
@@ -343,8 +338,6 @@
               <li>Enjoy a private boat ride through the waterways, gliding past historic houses and ancient bridges</li>
               <li>Discover the Former Residence of a Zhuangyuan, and learn about China’s imperial examination system
               </li>
-
-
             </ul>
             <div class="bold-text">Afternoon:</div>
             <div>Return journey by private car to Shanghai city center (1–1.5 hours).</div>
@@ -359,15 +352,11 @@
             <ul>
               <li> Stroll along stone-paved streets and cross centuries-old bridges, including the iconic Fangsheng
                 Bridge.</li>
-
               <li>Take a boat ride along the canals to experience the town from a unique perspective.</li>
               <li>Enjoy a riverside lunch at a local café or restaurant, savoring fresh local delicacies while soaking
                 in the serene scenery.</li>
               <li>Explore historic alleys, traditional shops, and cultural spots, capturing photos of charming bridges
                 and waterways.</li>
-
-
-
             </ul>
             <div class="bold-text">Afternoon– Return to Shanghai:</div>
             <div>Return journey by private car to Shanghai city center (1–1.5 hours)</div>
@@ -403,6 +392,7 @@
             </ul>
           </div>
         </el-tab-pane>
+
         <el-tab-pane label="What’s included" name="fourth">
           <div v-if="tourInfo.id === 1">
             <p style="margin-top: 2%;"><span class="bold-text">Includes</span></p>
@@ -432,7 +422,6 @@
             <ul>
               <li>Personal expenses (shopping, additional food or drinks)</li>
               <li>Gratuities for guide and driver</li>
-
             </ul>
           </div>
           <div v-if="tourInfo.id === 3">
@@ -442,13 +431,11 @@
               <li>Private car transfer with pick-up and drop-off from your hotel or chosen location</li>
               <li>Authentic Shanghai-style lunch</li>
               <li>Boat ride</li>
-
             </ul>
             <p style="margin-top: 2%;"><span class="bold-text">Excludes</span></p>
             <ul>
               <li>Personal expenses (shopping, additional food or drinks)</li>
               <li>Gratuities for guide and driver</li>
-
             </ul>
           </div>
           <div v-if="tourInfo.id === 4">
@@ -482,6 +469,7 @@
             </ul>
           </div>
         </el-tab-pane>
+
         <el-tab-pane label="Important info" name="five">
           <p style="margin-top: 2%;"><span class="bold-text">Cancellation Policy</span></p>
           Full Refund: Cancel at least 24 hours before the tour to receive a 100% refund.
@@ -490,7 +478,6 @@
               and is non-refundable, as we cannot recover it from PayPal. </li>
             <li>Example: If you paid $100 via PayPal and cancel more than 24 hours in advance, you will receive $95.60
               back, with $4.40 deducted for the fee.</li>
-
           </ul>
           No Refund: Cancellations less than 24 hours before the tour or no-shows will not be refunded.
           <p style="margin-top: 2%;"><span class="bold-text">What if it rains or the weather is bad?</span></p>
@@ -520,11 +507,11 @@
             </li>
           </ul>
         </el-tab-pane>
-
       </el-tabs>
     </div>
-      <OtherSh :exclude-id="tourInfo.id"/>
-     <Footer  />
+
+    <OtherSh :exclude-id="tourInfo.id" />
+    <Footer />
   </div>
 </template>
 
@@ -562,6 +549,7 @@ import img21 from '@/assets/sh-3-5.jpg';
 import img22 from '@/assets/sh-3-6.jpg';
 import img23 from '@/assets/sh-3-7.jpg';
 import img24 from '@/assets/sh-3-8.jpg';
+
 //
 import cdimg1 from '@/assets/sichuan/1.jpg';
 import cdimg2 from '@/assets/sichuan/2.jpg';
@@ -573,7 +561,6 @@ import cdimg8 from '@/assets/sichuan/8.jpg';
 import cdimg9 from '@/assets/sichuan/9.jpg';
 import cdimg10 from '@/assets/sichuan/10.jpg';
 import cdimg11 from '@/assets/sichuan/11.jpg';
-
 //
 import em1 from '@/assets/sichuan/em1.jpg';
 import em2 from '@/assets/sichuan/em2.jpg';
@@ -588,9 +575,9 @@ import em10 from '@/assets/sichuan/em10.jpg';
 import em11 from '@/assets/sichuan/em11.jpg';
 import em12 from '@/assets/sichuan/em12.jpg';
 import em13 from '@/assets/sichuan/em13.jpg';
-// import em14 from '@/assets/sichuan/em14.PNG';
+
 export default {
-  name: "Detail",
+  name: "DetailSh",
   components: {
     Header,
     OtherSh,
@@ -651,7 +638,6 @@ export default {
     },
     loadTourData(id) {
       this.tourInfo.id = id;
-
       if (id === 1) {
         this.images = [img1, img2, img3, img4, img5, img6, img7, img8];
         this.tourInfo.title = "Taste of Tradition: Shanghai Breakfast Tour";
@@ -668,40 +654,16 @@ export default {
         this.tourInfo.adultPrice = 169;
         this.tourInfo.childPrice = 129;
       } else if (id === 4) {
-        this.images = [cdimg1,
-          cdimg2,
-          cdimg3,
-          cdimg4,
-          cdimg6,
-          cdimg7,
-          cdimg8,
-          cdimg9,
-          cdimg10,
-          cdimg11,
-        ];
+        this.images = [cdimg1, cdimg2, cdimg3, cdimg4, cdimg6, cdimg7, cdimg8, cdimg9, cdimg10, cdimg11];
         this.tourInfo.title = "Mount Qingcheng & Panda Valley Day Tour";
         this.tourInfo.adultPrice = 125;
-        this.tourInfo.childPrice = 125; // 如果儿童价格相同
+        this.tourInfo.childPrice = 125;
       } else if (id === 5) {
-        this.images = [em1,
-          em2,
-          em3,
-          em4,
-          em5,
-          em6,
-          em7,
-          em8,
-          em9,
-          em10,
-          em11,
-          em12,
-          em13,
-        ];
+        this.images = [em1, em2, em3, em4, em5, em6, em7, em8, em9, em10, em11, em12, em13];
         this.tourInfo.title = "Emei Mountain & Ancient Town of Huanglongxi";
         this.tourInfo.adultPrice = 125;
         this.tourInfo.childPrice = 125;
       }
-
       this.currentImage = this.images.length > 0 ? this.images[0] : '';
     },
     setActiveImage(img) {
@@ -743,9 +705,7 @@ export default {
         this.imageHeight = img.clientHeight;
       }
     },
-    handleClick(tab) {
-      // Tab 切换回调
-    }
+    handleClick(tab) {}
   },
   watch: {
     '$route.params.id'(newId) {
@@ -757,10 +717,17 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .homepage {
   font-family: 'Arial', sans-serif;
+}
+
+/* ========== PC 端 ========== */
+.detail-section {
+  background-color: white;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .magnifier-wrapper {
@@ -778,21 +745,21 @@ export default {
 
 .thumb {
   width: 100px;
+  height: 60px;
   border: 2px solid transparent;
   cursor: pointer;
   border-radius: 4px;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .thumb.active {
   border-color: #409eff;
-}
-
-.thumb img {
-  width: 100px;
-  height: 60px;
-  object-fit: cover;
-  display: block;
-  border-radius: 2px;
 }
 
 /* 主图容器 */
@@ -820,7 +787,7 @@ export default {
   pointer-events: none;
 }
 
-/* 简洁产品信息区 */
+/* 产品信息 */
 .product-info-simple {
   display: flex;
   flex-direction: column;
@@ -835,14 +802,6 @@ export default {
   font-weight: 600;
   color: #333;
   line-height: 1.3;
-}
-
-.sub-title {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 500;
-  color: #555;
-  line-height: 1.4;
 }
 
 .price-section {
@@ -866,70 +825,133 @@ export default {
   font-size: 13px;
   color: #999;
   line-height: 1.5;
-  margin-top: 4px;
 }
 
 /* Tabs */
-.el-tabs {
+.tabs-section {
+  background-color: white;
+  padding: 0 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs-section .el-tabs {
+  width: 100%;
   max-width: 900px;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
-/* --- 修改后的 Tab 标题样式 --- */
-/* 使用深度选择器 /deep/ */
-.el-tabs /deep/ .el-tabs__item {
+:deep(.el-tabs__item) {
   background-color: #f0f0f0;
-  /* 设置背景为浅灰色 */
   font-weight: bold;
-  /* 设置字体加粗 */
-  /* 实现文字居中 */
-  /* 水平居中 */
-
+  padding: 0 20px;
+  height: 44px;
+  line-height: 44px;
+  margin-right: 4px;
+  border: none;
 }
 
-/* 可选：设置当前激活标签的样式 */
-.el-tabs /deep/ .el-tabs__item.is-active {
+:deep(.el-tabs__item.is-active) {
   background-color: #e0e0e0;
-  /* 激活时使用稍深一点的灰色 */
-  /* 激活时文字颜色 */
-}
-
-/* 可选：设置标签悬停时的样式 */
-.el-tabs /deep/ .el-tabs__item:hover {
-  background-color: #e8e8e8;
-  /* 悬停时的背景色 */
-}
-
-/* 加粗文本 */
-.bold-text {
-  font-weight: bold;
-  color: #d4a574;
-  /* 可选：用品牌色突出关键信息 */
-}
-
-a {
-  color: #0000ee;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #551a8b;
-}
-
-a:hover {
-  color: #0000ff;
+  color: #333;
 }
 
 .paragraph {
   margin-bottom: 1.5em;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bold-text {
+  font-weight: bold;
+  color: #d4a574;
+}
+
+/* ========== 移动端适配（<768px） ========== */
+@media (max-width: 767px) {
+  .detail-section {
+    padding: 20px 15px;
+  }
+
+  .magnifier-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumb-column,
+  .main-image-col,
+  .info-column {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 500px;
+    margin-left: 0 !important;
+  }
+
+  .thumb-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 4px 0;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .thumb-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .thumb {
+    width: 60px;
+    height: 40px;
+    flex: 0 0 auto;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 4;
+    max-height: 400px;
+    margin: 0 auto;
+  }
+
+  .product-info-simple {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+
+  .price-item {
+    font-size: 18px;
+  }
+
+  .price-amount {
+    font-size: 20px;
+  }
+
+  .age-note {
+    font-size: 12px;
+  }
+
+  .tabs-section {
+    padding: 0 15px 30px;
+  }
+
+  .paragraph,
+  ul li {
+    font-size: 15px;
+  }
 }
 </style>

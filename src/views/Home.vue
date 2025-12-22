@@ -8,13 +8,11 @@
     <section class="image-gallery">
       <div class="gallery-container">
         <div v-for="(image, index) in galleryImages" :key="index" class="gallery-item">
-          <router-link :to="`/Detail${image.type === 'cd' ? 'Cd' : 'Sh'}/${image.id}`">
-            <div class="image-overlay">
-              <img :src="image.src" alt="Gallery Image" />
-              <div class="overlay-content">
-                <h3>{{ image.title }}</h3>
-                <p>{{ image.description }}</p>
-              </div>
+          <router-link :to="`/Detail${image.type === 'cd' ? 'Cd' : 'Sh'}/${image.id}`" class="gallery-link">
+            <img :src="image.src" :alt="image.title" />
+            <div class="image-caption">
+              <h3>{{ image.title }}</h3>
+              <p>{{ image.description }}</p>
             </div>
           </router-link>
         </div>
@@ -25,24 +23,30 @@
     <section class="whyArea">
       <h1>Why Travel with Us</h1>
       <p>
-        We are a team of friends with  <span class="bold-text">international backgrounds </span>and a shared <span class="bold-text">passion for travel.</span>
+        We are a team of friends with <span class="bold-text">international backgrounds</span> and a shared <span class="bold-text">passion for travel.</span>
       </p>
-      <p>Shaped by our upbringing in China, enriched by studies at top universities in Europe and the U.S., and
+      <p>
+        Shaped by our upbringing in China, enriched by studies at top universities in Europe and the U.S., and
         broadened by work and life experiences around the world, we have a unique insight into what foreign travelers
-        really need when discovering China.</p>
-      <p>Wherever we are, one thing never changes: our love for exploring the world. We believe travel is not just about
-        reaching a destination, but about connecting with culture and people.</p>
+        really need when discovering China.
+      </p>
+      <p>
+        Wherever we are, one thing never changes: our love for exploring the world. We believe travel is not just about
+        reaching a destination, but about connecting with culture and people.
+      </p>
       <router-link to="/About" class="about-link">
         <div class="aboutBtn"></div>
       </router-link>
-      <!-- <div class="endImg"></div> -->
     </section>
+
     <!-- 评论 -->
     <Evaluation />
-     <!-- 底部-->
-   <Footer />
-    <!-- 移动端返回顶部按钮 -->
-    <router-link to="#" class="back-to-top" @click.native="scrollToTop"></router-link>
+
+    <!-- 底部 -->
+    <Footer />
+
+    <!-- 返回顶部按钮 -->
+    <a href="#" class="back-to-top" @click.prevent="scrollToTop" ref="backToTopBtn"></a>
   </div>
 </template>
 
@@ -57,6 +61,7 @@ import Header from "@/components/Header.vue";
 import Banner from "@/components/Banner.vue";
 import Evaluation from "@/components/Evaluation.vue";
 import Footer from "@/components/Footer.vue";
+
 export default {
   name: "HomePage",
   components: {
@@ -79,7 +84,22 @@ export default {
       ]
     };
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   methods: {
+    handleScroll() {
+      const btn = this.$refs.backToTopBtn;
+      if (!btn) return;
+      if (window.scrollY > 300) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    },
     scrollToTop(e) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -94,11 +114,12 @@ export default {
   margin: 0;
   padding: 0;
 }
+
 .bold-text {
   font-weight: bold;
   color: #d4a574;
-  /* 可选：用品牌色突出关键信息 */
 }
+
 /* 轮播图下方图片 */
 .image-gallery {
   padding: 40px 0;
@@ -116,8 +137,12 @@ export default {
 .gallery-item {
   flex: 0 0 30%;
   max-width: 30%;
-  position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.gallery-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .gallery-item img {
@@ -129,36 +154,26 @@ export default {
 }
 
 .gallery-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-.image-overlay {
-  position: relative;
+.image-caption {
+  padding: 12px 8px 0;
+  text-align: left;
 }
 
-.overlay-content {
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.image-caption h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+  line-height: 1.3;
 }
 
-.gallery-item:hover .overlay-content,
-.gallery-item:active .overlay-content {
-  opacity: 1;
+.image-caption p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  font-weight: bold;
 }
 
 /* Why Travel with Us 区域 */
@@ -166,6 +181,12 @@ export default {
   padding: 40px 20px;
   text-align: center;
   background-color: #f8f8f8;
+}
+
+.whyZone h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 .whyArea h1 {
@@ -202,14 +223,6 @@ export default {
   background-image: url('@/assets/jiantouhover.png');
 }
 
-.endImg {
-  background: url('@/assets/end.jpg') no-repeat center center;
-  background-size: cover;
-  margin-top: 20px;
-  width: 100%;
-  height: 400px;
-}
-
 /* 返回顶部按钮 */
 .back-to-top {
   position: fixed;
@@ -227,48 +240,25 @@ export default {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
   z-index: 100;
 }
 
-/* 滚动一定距离后显示 */
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
 }
 
-/* 动画效果 */
 @keyframes bounce {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-text {
-  animation: fadeIn 3s forwards;
-}
-
-/* ========================================
-   响应式设计：移动端适配
-   ======================================== */
-
-/* 屏幕宽度 <= 768px（平板、手机） */
+/* 响应式设计 */
 @media (max-width: 768px) {
   .gallery-item {
     flex: 0 0 100%;
@@ -279,18 +269,12 @@ export default {
     height: 200px;
   }
 
-  .overlay-content {
-    width: 90%;
-    height: 90%;
-    padding: 15px;
-  }
-
-  .overlay-content h3 {
+  .image-caption h3 {
     font-size: 18px;
   }
 
-  .overlay-content p {
-    font-size: 14px;
+  .image-caption p {
+    font-size: 15px;
   }
 
   .whyArea h1 {
@@ -302,18 +286,19 @@ export default {
     line-height: 1.6;
   }
 
-  .endImg {
-    height: 250px;
-    background-size: cover;
+  .aboutBtn {
+    width: 48px;
+    height: 48px;
   }
 
   .back-to-top {
-    display: block;
-    /* 启用返回顶部按钮 */
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 22px;
   }
 }
 
-/* 屏幕宽度 <= 480px（小手机） */
 @media (max-width: 480px) {
   .whyArea h1 {
     font-size: 20px;
@@ -328,13 +313,17 @@ export default {
     height: 180px;
   }
 
-  .aboutBtn {
-    width: 36px;
-    height: 36px;
+  .image-caption h3 {
+    font-size: 16px;
   }
 
-  .endImg {
-    height: 200px;
+  .image-caption p {
+    font-size: 14px;
+  }
+
+  .aboutBtn {
+    width: 44px;
+    height: 44px;
   }
 }
 </style>
