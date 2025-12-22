@@ -848,7 +848,9 @@ export default {
   display: flex;
   justify-content: center;
 }
-
+.tabs-section :deep(.el-tab-pane) {
+  color: #333;
+}
 .tabs-section .el-tabs {
   width: 100%;
   max-width: 900px;
