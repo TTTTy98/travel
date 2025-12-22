@@ -1665,6 +1665,7 @@ ul li {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.6;
+  color: #333; /* 或 #000，确保文字为深色 */
 }
 
 .bold-text {

@@ -370,7 +370,7 @@ header {
 @media (max-width: 480px) {
   .logo {
     width: 130px;
-    height: 45px;
+    height: 60px;
   }
 
   .navbar li {

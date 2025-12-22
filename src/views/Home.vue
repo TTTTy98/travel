@@ -21,7 +21,7 @@
 
     <!-- Why Travel with Us 区域 -->
     <section class="whyArea">
-      <h1>Why Travel with Us</h1>
+      <h1 style=" color: #333;">Why Travel with Us</h1>
       <p>
         We are a team of friends with <span class="bold-text">international backgrounds</span> and a shared <span class="bold-text">passion for travel.</span>
       </p>

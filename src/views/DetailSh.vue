@@ -3,56 +3,54 @@
     <!-- 顶部导航栏 -->
     <Header />
     
-    <section class="detail-section">
-      <el-row :gutter="20" class="magnifier-wrapper" type="flex" align="top">
-        <!-- 左侧缩略图 -->
-        <el-col :span="4" class="thumb-column">
-          <div class="thumb-list">
-            <div
-              v-for="(img, index) in images"
-              :key="index"
-              class="thumb"
-              :class="{ active: img === currentImage }"
-              @click="setActiveImage(img)"
-            >
-              <img :src="img" alt="Thumbnail" />
-            </div>
+ <section class="detail-section">
+  <div class="detail-layout">
+    <!-- 左侧缩略图 -->
+    <div class="thumb-column">
+      <div class="thumb-list">
+        <div
+          v-for="(img, index) in images"
+          :key="index"
+          class="thumb"
+          :class="{ active: img === currentImage }"
+          @click="setActiveImage(img)"
+        >
+          <img :src="img" alt="Thumbnail" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 中间主图（自动居中） -->
+    <div class="main-image-wrapper">
+      <div class="image-container">
+        <transition name="fade" mode="out-in">
+          <img
+            :src="currentImage"
+            class="main-img"
+            ref="mainImage"
+            :key="currentImage"
+            alt="Main product image"
+          />
+        </transition>
+        <div class="mask" v-if="showZoom" :style="{ top: maskTop + 'px', left: maskLeft + 'px' }"></div>
+      </div>
+    </div>
+
+    <!-- 右侧产品信息 -->
+    <div class="info-column">
+      <div class="product-info-simple">
+        <h1 class="main-title">{{ tourInfo.title }}</h1>
+        <div class="price-section">
+          <div class="price-item adult-price">
+            <span class="price-amount">${{ formatPrice(tourInfo.adultPrice) }}</span>/Pax
           </div>
-        </el-col>
-        <!-- 中间主图（居中） -->
-        <el-col :span="10" class="main-image-col">
-          <div class="image-container">
-            <transition name="fade" mode="out-in">
-              <img
-                :src="currentImage"
-                class="main-img"
-                ref="mainImage"
-                :key="currentImage"
-                alt="Main product image"
-              />
-            </transition>
-            <div class="mask" v-if="showZoom" :style="{ top: maskTop + 'px', left: maskLeft + 'px' }"></div>
-          </div>
-        </el-col>
-        <!-- 右侧产品信息 -->
-        <el-col :span="10" class="info-column">
-          <div class="product-info-simple">
-            <h1 class="main-title">{{ tourInfo.title }}</h1>
-            <div class="price-section">
-              <div class="price-item adult-price">
-                Adult: <span class="price-amount">${{ formatPrice(tourInfo.adultPrice) }}</span>/Pax
-              </div>
-              <div class="price-item child-price">
-                Child: <span class="price-amount">${{ formatPrice(tourInfo.childPrice) }}</span>/Pax
-              </div>
-            </div>
-            <div class="age-note">
-              {{ tourInfo.ageNote }}
-            </div>
-          </div>
-        </el-col>
-      </el-row>
-    </section>
+          <!-- <div class="price-item child-price">Child: ...</div> -->
+        </div>
+        <div class="age-note">{{ tourInfo.ageNote }}</div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Tabs 区域 -->
     <div class="tabs-section">
@@ -722,7 +720,7 @@ export default {
   font-family: 'Arial', sans-serif;
 }
 
-/* ========== PC 端 ========== */
+/* ========== PC 端主布局 ========== */
 .detail-section {
   background-color: white;
   padding: 30px 0;
@@ -730,12 +728,20 @@ export default {
   justify-content: center;
 }
 
-.magnifier-wrapper {
+.detail-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   max-width: 1200px;
   width: 100%;
+  gap: 30px; /* 控制三栏间距 */
 }
 
-/* 缩略图 */
+/* 左侧缩略图 */
+.thumb-column {
+  flex: 0 0 100px; /* 固定宽度 */
+}
+
 .thumb-list {
   display: flex;
   flex-direction: column;
@@ -747,8 +753,8 @@ export default {
   width: 100px;
   height: 60px;
   border: 2px solid transparent;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -762,14 +768,18 @@ export default {
   border-color: #409eff;
 }
 
-/* 主图容器 */
+/* 中间主图 */
+.main-image-wrapper {
+  flex: 0 0 auto;
+}
+
 .image-container {
   position: relative;
   width: 500px;
   height: 400px;
   border: 1px solid #e4e7ed;
-  overflow: hidden;
   border-radius: 4px;
+  overflow: hidden;
 }
 
 .main-img {
@@ -787,12 +797,16 @@ export default {
   pointer-events: none;
 }
 
-/* 产品信息 */
+/* 右侧产品信息 */
+.info-column {
+  flex: 1;
+  max-width: 400px;
+}
+
 .product-info-simple {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  margin-left: 50px;
   gap: 12px;
 }
 
@@ -827,7 +841,7 @@ export default {
   line-height: 1.5;
 }
 
-/* Tabs */
+/* Tabs 区域（保留原始样式） */
 .tabs-section {
   background-color: white;
   padding: 0 20%;
@@ -870,6 +884,7 @@ ul li {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.6;
+  color: #333; /* 或 #000，确保文字为深色 */
 }
 
 .bold-text {
@@ -883,18 +898,19 @@ ul li {
     padding: 20px 15px;
   }
 
-  .magnifier-wrapper {
+  .detail-layout {
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+    padding: 0 15px;
   }
 
   .thumb-column,
-  .main-image-col,
+  .main-image-wrapper,
   .info-column {
-    flex: none !important;
-    width: 100% !important;
+    flex: none;
+    width: 100%;
     max-width: 500px;
-    margin-left: 0 !important;
   }
 
   .thumb-list {
@@ -921,7 +937,6 @@ ul li {
     height: auto;
     aspect-ratio: 5 / 4;
     max-height: 400px;
-    margin: 0 auto;
   }
 
   .product-info-simple {
